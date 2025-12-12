@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Veritas Motor Group — Curated Used Cars</title>
+
+<!-- Inter font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#ffffff;
+    --text:#0b0b0b;
+    --muted:#6b6b6b;
+    --accent:#000;
+    --maxWidth:1200px;
+  }
+
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background:var(--bg);
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.45;
+  }
+
+  /* Header */
+  header{
+    position:sticky;
+    top:0;
+    z-index:40;
+    backdrop-filter: blur(6px);
+    background:rgba(255,255,255,0.86);
+    border-bottom: 1px solid rgba(10,10,10,0.04);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:1.25rem 1rem;
+  }
+  .site-inner{max-width:var(--maxWidth);width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0 1rem;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+  .brand img{height:44px; width:auto; display:block}
+  nav{display:flex; gap:1rem; align-items:center}
+  .nav-link{font-size:0.95rem;color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:6px}
+  .nav-link:hover{color:var(--text)}
+
+  /* Hero */
+  .hero{
+    width:100%;
+    min-height:64vh;
+    display:grid;
+    align-items:center;
+    background:#000;
+    color:#fff;
+  }
+  .hero-figure{position:relative;height:100%;overflow:hidden}
+  .hero-figure img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(0.95) saturate(0.85)}
+  .hero-inner{
+    max-width:var(--maxWidth);
+    margin:0 auto;
+    padding:8rem 1rem 6rem;
+    display:grid;
+    grid-template-columns: 1fr;
+    align-items:center;
+    gap:2rem;
+  }
+  .eyebrow{font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.85);font-size:0.9rem}
+  .hero-title{font-size:3.4rem;line-height:1.02;margin:0;font-weight:700;letter-spacing:-0.02em}
+  .hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.9);max-width:54ch;margin-top:0.6rem;font-weight:300}
+
+  /* Inventory sections (full width alternating) */
+  main{max-width:var(--maxWidth);margin:4rem auto;padding:0 1rem}
+  .inventory-list{display:flex;flex-direction:column;gap:6rem}
+  .inventory-item{
+    display:grid;
+    grid-template-columns: 1fr 560px;
+    gap:2.5rem;
+    align-items:center;
+    width:100%;
+  }
+  /* flip order on even */
+  .inventory-item:nth-child(even){grid-template-columns: 560px 1fr}
+
+  /* image column */
+  .vehicle-figure{height:420px;overflow:hidden;border-radius:6px}
+  .vehicle-figure img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.9,.3,1)}
+  .vehicle-figure:focus-within img,.vehicle-figure:hover img{transform:scale(1.02)}
+
+  /* details column */
+  .vehicle-meta{padding:0 0.5rem}
+  .kicker{font-weight:600;color:var(--muted);text-transform:uppercase;font-size:.85rem;letter-spacing:1px;margin-bottom:.6rem}
+  .vehicle-title{font-size:1.6rem;margin:0 0 .75rem;font-weight:700}
+  .vehicle-copy{color:var(--muted);max-width:56ch;margin-bottom:1.2rem}
+  .specs{display:flex;gap:1.6rem;flex-wrap:wrap;margin-bottom:1.25rem}
+  .spec{font-weight:600;color:var(--text);min-width:120px}
+  .spec small{display:block;font-weight:600;color:var(--muted);font-size:.78rem;margin-bottom:.25rem;text-transform:uppercase;letter-spacing:.8px}
+
+  .actions{display:flex;gap:1rem;align-items:center}
+  .btn{
+    background:var(--accent);
+    color:#fff;
+    padding:.9rem 1.25rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:.95rem;
+    display:inline-flex;align-items:center;gap:.6rem;border:1px solid rgba(255,255,255,0.06)
+  }
+  .btn.secondary{background:transparent;color:var(--text);border:1px solid rgba(10,10,10,0.08);font-weight:600}
+
+  /* footer */
+  footer{margin-top:6rem;padding:3.2rem 1rem;background:transparent;color:var(--muted);text-align:center;font-size:.95rem}
+
+  /* small screens */
+  @media (max-width:980px){
+    .inventory-item, .inventory-item:nth-child(even){grid-template-columns:1fr}
+    .vehicle-figure{height:360px}
+    .hero-inner{padding:6rem 1rem 4rem}
+    .hero-title{font-size:2.4rem}
+  }
+  @media (max-width:520px){
+    .hero-title{font-size:1.8rem}
+    .vehicle-figure{height:260px}
+  }
+
+  /* fade-up animation utility */
+  .fade-up{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.9,.3,1)}
+  .fade-up.visible{opacity:1;transform:none}
+  
+  /* modal */
+  .modal {
+    position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(8,8,8,0.5);z-index:60;
+  }
+  .modal.open{display:flex}
+  .modal-card{background:#fff;border-radius:10px;max-width:640px;width:94%;padding:1.25rem 1.25rem}
+  .modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem}
+  .modal h3{margin:0;font-size:1.25rem}
+  .modal-close{background:none;border:0;font-size:1.1rem;cursor:pointer}
+  .field{display:flex;flex-direction:column;margin-bottom:.75rem}
+  .field label{font-size:.85rem;margin-bottom:.35rem;color:var(--muted)}
+  .field input,.field textarea{padding:.6rem .7rem;border:1px solid rgba(10,10,10,0.08);border-radius:6px;font-size:1rem}
+  .modal-actions{display:flex;gap:.5rem;justify-content:flex-end}
+  .muted{font-size:.93rem;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="site-inner">
+    <a class="brand" href="#">
+      <img src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765481885/Logo_1_zefi9t.png" alt="Veritas Motor Group">
+    </a>
+
+    <nav aria-label="Primary navigation">
+      <a class="nav-link" href="#inventory">Inventory</a>
+      <a class="nav-link" href="#contact" id="openContact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" aria-hidden="false">
+  <div class="hero-figure" aria-hidden="true" style="position:absolute;inset:0">
+    <img src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765490703/kace-rodriguez-HX9fOoD9xN4-unsplash_f0bea6_riv5mt.jpg" alt="">
+  </div>
+
+  <div class="hero-inner" role="presentation">
+    <div class="fade-up" style="max-width:var(--maxWidth)">
+      <div class="eyebrow">Curated | Premium</div>
+      <h1 class="hero-title">Premium Used Cars — Carefully Curated Selection</h1>
+      <p class="hero-sub">We source, inspect, and present a small selection of notable vehicles. No gimmicks — just thoughtfully chosen cars and a simple buying experience.</p>
+    </div>
+  </div>
+</section>
+
+<main id="inventory">
+  <div class="inventory-list">
+
+    <!-- Item 1 -->
+    <article class="inventory-item fade-up" tabindex="0">
+      <figure class="vehicle-figure" aria-hidden="false">
+        <img src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1763704651/PXL_20250927_201523836_2_qrvwkh.jpg" alt="2011 Mitsubishi Lancer Evolution X">
+      </figure>
+
+      <div class="vehicle-meta">
+        <div class="kicker">2011 • Mitsubishi</div>
+        <h2 class="vehicle-title">2011 Mitsubishi Lancer Evolution X</h2>
+        <p class="vehicle-copy">High-performance sports sedan with iconic design and thrilling driving dynamics. This well-maintained Evolution X is ready to deliver an exceptional driving experience.</p>
+
+        <div class="specs" role="list">
+          <div class="spec" role="listitem"><small>Model</small> Lancer Evo X</div>
+          <div class="spec" role="listitem"><small>Transmission</small> 5-Speed Manual</div>
+          <div class="spec" role="listitem"><small>Mileage</small> Available on request</div>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="#" data-title="2011 Mitsubishi Lancer Evolution X" id="inquire1">Inquire</a>
+          <a class="btn secondary" href="mailto:sales@veritasmotorgroup.com?subject=Inquiry%20-%202011%20Mitsubishi%20Lancer%20Evolution%20X">Email</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Item 2 -->
+    <article class="inventory-item fade-up" tabindex="0">
+      <div class="vehicle-figure">
+        <img src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765482143/PXL_20251129_233513135_yl1gxw.jpg" alt="2014 Hyundai Veloster">
+      </div>
+
+      <div class="vehicle-meta">
+        <div class="kicker">2014 • Hyundai</div>
+        <h2 class="vehicle-title">2014 Hyundai Veloster</h2>
+        <p class="vehicle-copy">Stylish hatchback with distinctive three-door design and fun driving characteristics. Perfect for those seeking a practical yet spirited vehicle with great value.</p>
+
+        <div class="specs" role="list">
+          <div class="spec" role="listitem"><small>Model</small> Veloster</div>
+          <div class="spec" role="listitem"><small>Transmission</small> 6-Speed Manual</div>
+          <div class="spec" role="listitem"><small>Mileage</small> Available on request</div>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="#" data-title="2014 Hyundai Veloster" id="inquire2">Inquire</a>
+          <a class="btn secondary" href="mailto:sales@veritasmotorgroup.com?subject=Inquiry%20-%202014%20Hyundai%20Veloster">Email</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer aria-labelledby="foot">
+  <p id="foot">&copy; 2025 Veritas Motor Group — Serving the community with integrity.</p>
+</footer>
+
+<!-- Modal Contact -->
+<div class="modal" id="modalContact" aria-hidden="true" role="dialog" aria-label="Contact form">
+  <div class="modal-card" role="document">
+    <div class="modal-header">
+      <h3>Contact us about a vehicle</h3>
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    </div>
+
+    <form id="contactForm">
+      <div class="field">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" placeholder="Jane Buyer" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@email.com" required>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Interested in the 2011 Mitsubishi Lancer Evolution X" required></textarea>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn secondary" id="modalCancel">Cancel</button>
+        <button type="submit" class="btn">Send</button>
+      </div>
+      <p class="muted" style="margin-top:.65rem">Submitting will open your email client as a fallback. For a production site you can wire this form to your backend or form service.</p>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Fade-in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, {threshold: 0.12});
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Modal + inquiry wiring
+  const modal = document.getElementById('modalContact');
+  const modalClose = document.getElementById('modalClose');
+  const modalCancel = document.getElementById('modalCancel');
+  const openContact = document.getElementById('openContact');
+
+  function openModal(prefillText){
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.getElementById('message').value = prefillText || '';
+    document.getElementById('name').focus();
+  }
+  function closeModal(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+  }
+
+  document.querySelectorAll('[id^="inquire"]').forEach(btn=>{
+    btn.addEventListener('click', (e)=>{
+      e.preventDefault();
+      openModal(`Interested in the ${btn.dataset.title}`);
+    });
+  });
+
+  openContact.addEventListener('click', (e)=>{
+    e.preventDefault();
+    openModal('');
+  });
+
+  modalClose.addEventListener('click', closeModal);
+  modalCancel.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e)=>{
+    if (e.target === modal) closeModal();
+  });
+
+  // Form submit — fallback to mailto
+  document.getElementById('contactForm').addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const name = encodeURIComponent(document.getElementById('name').value);
+    const email = encodeURIComponent(document.getElementById('email').value);
+    const message = encodeURIComponent(document.getElementById('message').value);
+    const subject = encodeURIComponent('Vehicle inquiry from website');
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+    window.location.href = `mailto:sales@veritasmotorgroup.com?subject=${subject}&body=${body}`;
+  });
+</script>
+
+</body>
+</html>
