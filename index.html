@@ -90,13 +90,14 @@ color:var(--text)
 }
 /* Hero */
 .hero {
-width:100%;
+width:100vw;
 min-height:64vh;
 display:grid;
 align-items:center;
 background:#000;
 color:#fff;
 position:relative;
+margin-left:calc(-50vw + 50%);
 }
 .hero-figure {
 position:absolute;
@@ -127,6 +128,7 @@ align-items:center;
 gap:2rem;
 position:relative;
 z-index:3;
+width:100%;
 }
 .eyebrow {
 font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.95);font-size:0.9rem;text-shadow:0 2px 4px rgba(0,0,0,0.3);
@@ -138,7 +140,7 @@ font-size:3.4rem;line-height:1.02;margin:0;font-weight:700;letter-spacing:-0.02e
 font-size:1.05rem;color:rgba(255,255,255,0.95);max-width:54ch;margin-top:0.6rem;font-weight:300;text-shadow:0 2px 4px rgba(0,0,0,0.3);
 }
 main {
-max-width:var(--maxWidth);margin:4rem auto;padding:0 1rem
+max-width:var(--maxWidth);margin:4rem auto;padding:0 1rem;width:100%;
 }
 .inventory-list {
 display:flex;flex-direction:column;gap:6rem
@@ -275,6 +277,16 @@ margin-top:6rem;padding:2.5rem 1rem;
 .contact-section h2 {
 font-size:1.5rem;
 }
+.vehicle-meta {
+text-align:center;
+}
+.vehicle-copy {
+margin-left:auto;
+margin-right:auto;
+}
+.specs {
+justify-content:center;
+}
 }
 @media (max-width:520px) {
 .hero-title {
@@ -298,6 +310,16 @@ flex-direction:column;
 }
 .btn {
 width:100%;justify-content:center;
+}
+.vehicle-meta {
+text-align:center;
+}
+.vehicle-copy {
+margin-left:auto;
+margin-right:auto;
+}
+.specs {
+justify-content:center;
 }
 }
 /* Fade Up Animation */
@@ -434,7 +456,7 @@ width:60px;height:60px
 </div>
 </a>
 <nav aria-label="Primary navigation">
-<a class="nav-link" href="#inventory">Inventory</a>
+<a class="nav-link" href="#inventory-start">Inventory</a>
 <a class="nav-link" href="#contact-form">Contact</a>
 </nav>
 </div>
@@ -451,8 +473,9 @@ width:60px;height:60px
 </div>
 </div>
 </section>
-<main id="inventory">
-<div class="inventory-list">
+<main>
+<div id="inventory-start"></div>
+<div id="inventory" class="inventory-list">
 <!-- Item 1: 2011 Mitsubishi Lancer Evolution X -->
 <article class="inventory-item fade-up" tabindex="0">
 <figure class="vehicle-figure gallery-trigger" data-vehicle="evo-x">
