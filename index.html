@@ -17,6 +17,9 @@
 * {
 box-sizing:border-box
 }
+html {
+scroll-behavior:smooth;
+}
 html,body {
 height:100%;
 overflow-x:hidden;
@@ -42,6 +45,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 padding:0.75rem 1rem;
+height:80px;
 }
 .site-inner {
 max-width:var(--maxWidth);
@@ -86,6 +90,7 @@ text-decoration:none;
 padding:8px 10px;
 border-radius:6px;
 white-space:nowrap;
+cursor:pointer;
 }
 .nav-link:hover {
 color:var(--text)
@@ -261,6 +266,9 @@ font-size:2.4rem
 }
 }
 @media (max-width:768px) {
+header {
+height:70px;
+}
 .brand-logo {
 height:72px;
 width:195px;
@@ -290,6 +298,9 @@ justify-content:center;
 }
 }
 @media (max-width:520px) {
+header {
+height:65px;
+}
 .hero-title {
 font-size:1.8rem;
 text-shadow:0 2px 6px rgba(0,0,0,0.5);
@@ -798,9 +809,22 @@ modal.classList.remove('open');
 modal.setAttribute('aria-hidden','true');
 if(lastFocusedElement) lastFocusedElement.focus();
 }
-document.querySelector('.open-contact').addEventListener('click', e => {
+document.querySelectorAll('.nav-link').forEach(link => {
+link.addEventListener('click', (e) => {
+const href = link.getAttribute('href');
+if (href && href.startsWith('#')) {
 e.preventDefault();
-openModal();
+const element = document.querySelector(href);
+if (element) {
+const headerHeight = document.querySelector('header').offsetHeight;
+const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+window.scrollTo({
+top: elementPosition - headerHeight,
+behavior: 'smooth'
+});
+}
+}
+});
 });
 modalClose.addEventListener('click', closeModal);
 modalCancel.addEventListener('click', closeModal);
