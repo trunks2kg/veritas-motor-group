@@ -8,551 +8,561 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
---bg:#ffffff;
---text:#0b0b0b;
---muted:#6b6b6b;
---accent:#000;
---maxWidth:1200px;
+  --bg:#ffffff;
+  --text:#0b0b0b;
+  --muted:#6b6b6b;
+  --accent:#000;
+  --maxWidth:1200px;
 }
 * {
-box-sizing:border-box
+  box-sizing:border-box
 }
 html,body {
-height:100%
+  height:100%
 }
 body {
-margin:0;
-font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-background:var(--bg);
-color:var(--text);
--webkit-font-smoothing:antialiased;
--moz-osx-font-smoothing:grayscale;
-line-height:1.45;
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
 }
 /* Header */
 header {
-position:sticky;
-top:0;
-z-index:40;
-backdrop-filter: blur(6px);
-background:rgba(255,255,255,0.86);
-border-bottom:1px solid rgba(10,10,10,0.04);
-display:flex;
-align-items:center;
-justify-content:center;
-padding:0.75rem 1rem;
+  position:sticky;
+  top:0;
+  z-index:40;
+  backdrop-filter: blur(6px);
+  /* Make header a solid white so it matches the logo's white exactly */
+  background:#ffffff;
+  border-bottom:1px solid rgba(10,10,10,0.04);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0.75rem 1rem;
 }
 .site-inner {
-max-width:var(--maxWidth);
-width:100%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:2rem;
-padding:0 1rem;
-margin:0 auto;
+  max-width:var(--maxWidth);
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:2rem;
+  padding:0 1rem;
+  margin:0 auto;
 }
 .brand {
-display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);overflow:hidden;margin-right:-20px
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:var(--text);
+  /* Remove the negative margin and clip any overflow from the logo image */
+  margin-right:0;
+  overflow:hidden;
 }
 .brand img {
-height:96px;
-max-height:12vh;
-width:auto;
-display:block;
+  height:96px;
+  max-height:12vh;
+  width:auto;
+  display:block;
+  /* Slightly crop the image so the right edge cannot show */
+  transform:translateX(-2px);
 }
 nav {
-display:flex;gap:1rem;align-items:center
+  display:flex;gap:1rem;align-items:center
 }
 .nav-link {
-font-size:0.95rem;
-color:var(--muted);
-text-decoration:none;
-padding:8px 10px;
-border-radius:6px;
+  font-size:0.95rem;
+  color:var(--muted);
+  text-decoration:none;
+  padding:8px 10px;
+  border-radius:6px;
 }
 .nav-link:hover {
-color:var(--text)
+  color:var(--text)
 }
 /* Hero */
 .hero {
-width:100%;
-min-height:64vh;
-display:grid;
-align-items:center;
-background:#000;
-color:#fff;
-position:relative;
+  width:100%;
+  min-height:64vh;
+  display:grid;
+  align-items:center;
+  background:#000;
+  color:#fff;
+  position:relative;
 }
 .hero-figure {
-position:absolute;
-inset:0;
-overflow:hidden;
-z-index:1;
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  z-index:1;
 }
 .hero-figure img {
-width:100%;height:100%;object-fit:cover;display:block;
-filter:none;
+  width:100%;height:100%;object-fit:cover;display:block;
+  filter:none;
 }
 .hero-figure::after {
-content:'';
-position:absolute;
-inset:0;
-background:linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.6) 100%);
-z-index:2;
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.6) 100%);
+  z-index:2;
 }
 .hero-inner {
-max-width:var(--maxWidth);
-margin:0 auto;
-padding:8rem 1rem 6rem;
-display:grid;
-grid-template-columns:1fr;
-align-items:center;
-gap:2rem;
-position:relative;
-z-index:3;
+  max-width:var(--maxWidth);
+  margin:0 auto;
+  padding:8rem 1rem 6rem;
+  display:grid;
+  grid-template-columns:1fr;
+  align-items:center;
+  gap:2rem;
+  position:relative;
+  z-index:3;
 }
 .eyebrow {
-font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.95);font-size:0.9rem;text-shadow:0 2px 4px rgba(0,0,0,0.3);
+  font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.95);font-size:0.9rem;text-shadow:0 2px 4px rgba(0,0,0,0.3);
 }
 .hero-title {
-font-size:3.4rem;line-height:1.02;margin:0;font-weight:700;letter-spacing:-0.02em;text-shadow:0 3px 8px rgba(0,0,0,0.4);
+  font-size:3.4rem;line-height:1.02;margin:0;font-weight:700;letter-spacing:-0.02em;text-shadow:0 3px 8px rgba(0,0,0,0.4);
 }
 .hero-sub {
-font-size:1.05rem;color:rgba(255,255,255,0.95);max-width:54ch;margin-top:0.6rem;font-weight:300;text-shadow:0 2px 4px rgba(0,0,0,0.3);
+  font-size:1.05rem;color:rgba(255,255,255,0.95);max-width:54ch;margin-top:0.6rem;font-weight:300;text-shadow:0 2px 4px rgba(0,0,0,0.3);
 }
 main {
-max-width:var(--maxWidth);margin:4rem auto;padding:0 1rem
+  max-width:var(--maxWidth);margin:4rem auto;padding:0 1rem
 }
 .inventory-list {
-display:flex;flex-direction:column;gap:6rem
+  display:flex;flex-direction:column;gap:6rem
 }
 .inventory-item {
-display:grid;
-grid-template-columns:1fr 560px;
-gap:2.5rem;
-align-items:center;
-width:100%;
-contain:layout paint;
+  display:grid;
+  grid-template-columns:1fr 560px;
+  gap:2.5rem;
+  align-items:center;
+  width:100%;
+  contain:layout paint;
 }
 .inventory-item:nth-child(even) {
-grid-template-columns:560px 1fr;
+  grid-template-columns:560px 1fr;
 }
 .vehicle-figure {
-height:420px;overflow:hidden;border-radius:6px;cursor:pointer;position:relative
+  height:420px;overflow:hidden;border-radius:6px;cursor:pointer;position:relative
 }
 .vehicle-figure img {
-width:100%;height:100%;object-fit:cover;display:block;
-transition:transform .7s cubic-bezier(.2,.9,.3,1);
+  width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .7s cubic-bezier(.2,.9,.3,1);
 }
 .vehicle-figure:hover img {
-transform:scale(1.02);
+  transform:scale(1.02);
 }
 .vehicle-meta {
-padding:0 0.5rem
+  padding:0 0.5rem
 }
 .kicker {
-font-weight:600;color:var(--muted);text-transform:uppercase;font-size:.85rem;letter-spacing:1px;margin-bottom:.6rem
+  font-weight:600;color:var(--muted);text-transform:uppercase;font-size:.85rem;letter-spacing:1px;margin-bottom:.6rem
 }
 .vehicle-title {
-font-size:1.6rem;margin:0 0 .75rem;font-weight:700
+  font-size:1.6rem;margin:0 0 .75rem;font-weight:700
 }
 .vehicle-copy {
-color:var(--muted);max-width:56ch;margin-bottom:1.2rem
+  color:var(--muted);max-width:56ch;margin-bottom:1.2rem
 }
 .specs {
-display:flex;gap:1.6rem;flex-wrap:wrap;margin-bottom:1.25rem
+  display:flex;gap:1.6rem;flex-wrap:wrap;margin-bottom:1.25rem
 }
 .spec {
-font-weight:600;color:var(--text);min-width:120px
+  font-weight:600;color:var(--text);min-width:120px
 }
 .spec small {
-display:block;font-weight:600;color:var(--muted);font-size:.78rem;margin-bottom:.25rem;text-transform:uppercase;letter-spacing:.8px
+  display:block;font-weight:600;color:var(--muted);font-size:.78rem;margin-bottom:.25rem;text-transform:uppercase;letter-spacing:.8px
 }
 .actions {
-display:flex;gap:1rem;align-items:center
+  display:flex;gap:1rem;align-items:center
 }
 .btn {
-background:var(--accent);
-color:#fff;
-padding:.9rem 1.25rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:.95rem;
-display:inline-flex;align-items:center;gap:.6rem;
-border:1px solid rgba(255,255,255,0.06);
+  background:var(--accent);
+  color:#fff;
+  padding:.9rem 1.25rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:.95rem;
+  display:inline-flex;align-items:center;gap:.6rem;
+  border:1px solid rgba(255,255,255,0.06);
 }
 .btn.secondary {
-background:transparent;color:var(--text);
-border:1px solid rgba(10,10,10,0.08);
-font-weight:600;
+  background:transparent;color:var(--text);
+  border:1px solid rgba(10,10,10,0.08);
+  font-weight:600;
 }
 footer {
-margin-top:6rem;padding:3.2rem 1rem;background:transparent;color:var(--muted);
-text-align:center;font-size:.95rem;
+  margin-top:6rem;padding:3.2rem 1rem;background:transparent;color:var(--muted);
+  text-align:center;font-size:.95rem;
 }
 footer iframe {
-margin-top:1.5rem;
-width:100%;height:260px;border:0;border-radius:6px;
+  margin-top:1.5rem;
+  width:100%;height:260px;border:0;border-radius:6px;
 }
 /* Responsive */
 @media (max-width:980px) {
-.inventory-item {
-grid-template-columns:1fr !important
-}
-.vehicle-figure {
-height:360px
-}
-.hero-inner {
-padding:6rem 1rem 4rem
-}
-.hero-title {
-font-size:2.4rem
-}
+  .inventory-item {
+    grid-template-columns:1fr !important
+  }
+  .vehicle-figure {
+    height:360px
+  }
+  .hero-inner {
+    padding:6rem 1rem 4rem
+  }
+  .hero-title {
+    font-size:2.4rem
+  }
 }
 @media (max-width:768px) {
-.brand img {
-height:72px;
-}
+  .brand img {
+    height:72px;
+  }
 }
 @media (max-width:520px) {
-.hero-title {
-font-size:1.8rem;
-text-shadow:0 2px 6px rgba(0,0,0,0.5);
-}
-.hero-sub {
-text-shadow:0 2px 4px rgba(0,0,0,0.4);
-}
-.eyebrow {
-text-shadow:0 1px 3px rgba(0,0,0,0.3);
-}
-.vehicle-figure {
-height:260px
-}
-main {
-margin-top:3rem
-}
+  .hero-title {
+    font-size:1.8rem;
+    text-shadow:0 2px 6px rgba(0,0,0,0.5);
+  }
+  .hero-sub {
+    text-shadow:0 2px 4px rgba(0,0,0,0.4);
+  }
+  .eyebrow {
+    text-shadow:0 1px 3px rgba(0,0,0,0.3);
+  }
+  .vehicle-figure {
+    height:260px
+  }
+  main {
+    margin-top:3rem
+  }
 }
 /* Fade Up Animation */
 .fade-up {
-opacity:0;transform:translateY(30px);transition:opacity .8s, transform .8s cubic-bezier(.2,.9,.3,1)
+  opacity:0;transform:translateY(30px);transition:opacity .8s, transform .8s cubic-bezier(.2,.9,.3,1)
 }
 .fade-up.visible {
-opacity:1;transform:none
+  opacity:1;transform:none
 }
 /* Modal */
 .modal {
-position:fixed;inset:0;display:none;align-items:center;justify-content:center;
-background:rgba(8,8,8,0.5);z-index:60;
+  position:fixed;inset:0;display:none;align-items:center;justify-content:center;
+  background:rgba(8,8,8,0.5);z-index:60;
 }
 .modal.open {
-display:flex
+  display:flex
 }
 .modal-card {
-background:#fff;border-radius:10px;max-width:640px;width:94%;padding:1.25rem;
+  background:#fff;border-radius:10px;max-width:640px;width:94%;padding:1.25rem;
 }
 .modal-header {
-display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem
+  display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem
 }
 .modal h3 {
-margin:0;font-size:1.25rem
+  margin:0;font-size:1.25rem
 }
 .modal-close {
-background:none;border:0;font-size:1.1rem;cursor:pointer
+  background:none;border:0;font-size:1.1rem;cursor:pointer
 }
 .field {
-display:flex;flex-direction:column;margin-bottom:.75rem
+  display:flex;flex-direction:column;margin-bottom:.75rem
 }
 .field label {
-font-size:.85rem;margin-bottom:.35rem;color:var(--muted)
+  font-size:.85rem;margin-bottom:.35rem;color:var(--muted)
 }
 .field input,.field textarea {
-padding:.6rem .7rem;border:1px solid rgba(10,10,10,0.08);
-border-radius:6px;font-size:1rem;
+  padding:.6rem .7rem;border:1px solid rgba(10,10,10,0.08);
+  border-radius:6px;font-size:1rem;
 }
 .modal-actions {
-display:flex;gap:.5rem;justify-content:flex-end
+  display:flex;gap:.5rem;justify-content:flex-end
 }
 .muted {
-font-size:.93rem;color:var(--muted)
+  font-size:.93rem;color:var(--muted)
 }
 /* Gallery Modal */
 .gallery-modal {
-position:fixed;inset:0;display:none;align-items:center;justify-content:center;
-background:rgba(8,8,8,0.95);z-index:70;
+  position:fixed;inset:0;display:none;align-items:center;justify-content:center;
+  background:rgba(8,8,8,0.95);z-index:70;
 }
 .gallery-modal.open {
-display:flex
+  display:flex
 }
 .gallery-container {
-position:relative;width:90%;max-width:900px;
-display:flex;flex-direction:column;gap:1rem;
+  position:relative;width:90%;max-width:900px;
+  display:flex;flex-direction:column;gap:1rem;
 }
 .gallery-main {
-position:relative;width:100%;padding-bottom:66.67%;
-overflow:hidden;border-radius:8px;background:#000;
+  position:relative;width:100%;padding-bottom:66.67%;
+  overflow:hidden;border-radius:8px;background:#000;
 }
 .gallery-main img {
-position:absolute;top:0;left:0;
-width:100%;height:100%;object-fit:contain;
+  position:absolute;top:0;left:0;
+  width:100%;height:100%;object-fit:contain;
 }
 .gallery-counter {
-position:absolute;top:1rem;right:1rem;
-background:rgba(0,0,0,0.7);color:#fff;
-padding:.5rem .75rem;border-radius:4px;font-size:.9rem;font-weight:600;
+  position:absolute;top:1rem;right:1rem;
+  background:rgba(0,0,0,0.7);color:#fff;
+  padding:.5rem .75rem;border-radius:4px;font-size:.9rem;font-weight:600;
 }
 .gallery-controls {
-display:flex;gap:1rem;align-items:center;justify-content:center;
+  display:flex;gap:1rem;align-items:center;justify-content:center;
 }
 .gallery-btn {
-background:rgba(255,255,255,0.2);color:#fff;
-border:none;padding:.75rem 1.25rem;border-radius:6px;
-font-weight:600;cursor:pointer;font-size:.95rem;
-transition:background .3s;
+  background:rgba(255,255,255,0.2);color:#fff;
+  border:none;padding:.75rem 1.25rem;border-radius:6px;
+  font-weight:600;cursor:pointer;font-size:.95rem;
+  transition:background .3s;
 }
 .gallery-btn:hover {
-background:rgba(255,255,255,0.3)
+  background:rgba(255,255,255,0.3)
 }
 .gallery-btn:disabled {
-opacity:.5;cursor:not-allowed
+  opacity:.5;cursor:not-allowed
 }
 .gallery-close-btn {
-position:absolute;top:1rem;left:1rem;
-background:rgba(0,0,0,0.7);color:#fff;
-border:none;padding:.5rem .75rem;border-radius:4px;
-font-size:1.2rem;cursor:pointer;
-transition:background .3s;
+  position:absolute;top:1rem;left:1rem;
+  background:rgba(0,0,0,0.7);color:#fff;
+  border:none;padding:.5rem .75rem;border-radius:4px;
+  font-size:1.2rem;cursor:pointer;
+  transition:background .3s;
 }
 .gallery-close-btn:hover {
-background:rgba(0,0,0,0.9)
+  background:rgba(0,0,0,0.9)
 }
 .gallery-thumbnails {
-display:flex;gap:.75rem;overflow-x:auto;padding:.5rem;
-background:rgba(0,0,0,0.4);border-radius:6px;
+  display:flex;gap:.75rem;overflow-x:auto;padding:.5rem;
+  background:rgba(0,0,0,0.4);border-radius:6px;
 }
 .gallery-thumb {
-width:80px;height:80px;flex-shrink:0;
-border:2px solid transparent;border-radius:4px;overflow:hidden;
-cursor:pointer;transition:all .3s;
+  width:80px;height:80px;flex-shrink:0;
+  border:2px solid transparent;border-radius:4px;overflow:hidden;
+  cursor:pointer;transition:all .3s;
 }
 .gallery-thumb img {
-width:100%;height:100%;object-fit:cover;display:block;
+  width:100%;height:100%;object-fit:cover;display:block;
 }
 .gallery-thumb.active {
-border-color:#fff;
-transform:scale(1.05);
+  border-color:#fff;
+  transform:scale(1.05);
 }
 .gallery-thumb:hover {
-opacity:.8
+  opacity:.8
 }
 @media (max-width:768px) {
-.gallery-container {
-width:95%;max-width:100%
-}
-.gallery-thumbnails {
-gap:.5rem
-}
-.gallery-thumb {
-width:60px;height:60px
-}
+  .gallery-container {
+    width:95%;max-width:100%
+  }
+  .gallery-thumbnails {
+    gap:.5rem
+  }
+  .gallery-thumb {
+    width:60px;height:60px
+  }
 }
 </style>
 </head>
 <body>
 <header>
-<div class="site-inner">
-<a class="brand" href="#">
-<img src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765567703/ChatGPT_Image_Dec_12_2025_11_28_07_AM_ywnvbz.jpg" alt="Veritas Motor Group">
-</a>
-<nav aria-label="Primary navigation">
-<a class="nav-link" href="#inventory">Inventory</a>
-<a class="nav-link open-contact" href="#contact">Contact</a>
-</nav>
-</div>
+  <div class="site-inner">
+    <a class="brand" href="#">
+      <img src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765567703/ChatGPT_Image_Dec_12_2025_11_28_07_AM_ywnvbz.jpg" alt="Veritas Motor Group">
+    </a>
+    <nav aria-label="Primary navigation">
+      <a class="nav-link" href="#inventory">Inventory</a>
+      <a class="nav-link open-contact" href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 <section class="hero">
-<div class="hero-figure" aria-hidden="true">
-<img src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765490703/kace-rodriguez-HX9fOoD9xN4-unsplash_f0bea6_riv5mt.jpg" alt="" role="presentation">
-</div>
-<div class="hero-inner">
-<div class="fade-up">
-<div class="eyebrow">Curated | Premium</div>
-<h1 class="hero-title">Drive Something Special</h1>
-<p class="hero-sub">Hand-selected. Inspected thoroughly. Priced fairly. Sold with integrity.</p>
-</div>
-</div>
+  <div class="hero-figure" aria-hidden="true">
+    <img src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765490703/kace-rodriguez-HX9fOoD9xN4-unsplash_f0bea6_riv5mt.jpg" alt="" role="presentation">
+  </div>
+  <div class="hero-inner">
+    <div class="fade-up">
+      <div class="eyebrow">Curated | Premium</div>
+      <h1 class="hero-title">Drive Something Special</h1>
+      <p class="hero-sub">Hand-selected. Inspected thoroughly. Priced fairly. Sold with integrity.</p>
+    </div>
+  </div>
 </section>
 <main id="inventory">
-<div class="inventory-list">
-<!-- Item 1: 2011 Mitsubishi Lancer Evolution X -->
-<article class="inventory-item fade-up" tabindex="0">
-<figure class="vehicle-figure gallery-trigger" data-vehicle="evo-x">
-<img loading="lazy" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1763704651/PXL_20250927_201523836_2_qrvwkh.jpg" alt="2011 Mitsubishi Lancer Evolution X">
-</figure>
-<div class="vehicle-meta">
-<div class="kicker">2011 • Mitsubishi</div>
-<h2 class="vehicle-title">2011 Mitsubishi Lancer Evolution X</h2>
-<p class="vehicle-copy">High-performance sports sedan with iconic design and thrilling driving dynamics. This well-maintained Evolution X is ready to deliver an exceptional driving experience.</p>
-<div class="specs" role="list">
-<div class="spec"><small>Model</small>Lancer Evo X</div>
-<div class="spec"><small>Transmission</small>5-Speed Manual</div>
-<div class="spec"><small>Mileage</small>100,600</div>
-<div class="spec"><small>Price</small>$20,000</div>
-</div>
-</div>
-</article>
-<!-- Item 2: 2014 Hyundai Veloster -->
-<article class="inventory-item fade-up" tabindex="0">
-<figure class="vehicle-figure gallery-trigger" data-vehicle="veloster">
-<img loading="lazy" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765482143/PXL_20251129_233513135_yl1gxw.jpg" alt="2014 Hyundai Veloster">
-</figure>
-<div class="vehicle-meta">
-<div class="kicker">2014 • Hyundai</div>
-<h2 class="vehicle-title">2014 Hyundai Veloster</h2>
-<p class="vehicle-copy">Stylish hatchback with distinctive three-door design and fun driving characteristics. Perfect for those seeking a practical yet spirited vehicle with great value.</p>
-<div class="specs" role="list">
-<div class="spec"><small>Model</small>Veloster</div>
-<div class="spec"><small>Transmission</small>6-Speed Manual</div>
-<div class="spec"><small>Mileage</small>122,686</div>
-<div class="spec"><small>Price</small>$5,000</div>
-</div>
-</div>
-</article>
-<!-- Item 3: 2016 BMW 320I -->
-<article class="inventory-item fade-up" tabindex="0">
-<figure class="vehicle-figure gallery-trigger" data-vehicle="bmw-320i">
-<img loading="lazy" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765585700/automobile-1834274_mpbjda.jpg" alt="2016 BMW 320I">
-<div style="position:absolute;top:12px;right:12px;background:rgba(0,0,0,0.75);color:#fff;padding:0.5rem 0.75rem;border-radius:6px;font-weight:700;font-size:0.85rem;z-index:10;">Coming Soon</div>
-</figure>
-<div class="vehicle-meta">
-<div class="kicker">2016 • BMW</div>
-<h2 class="vehicle-title">2016 BMW 320I</h2>
-<p class="vehicle-copy">Luxury compact sedan with refined German engineering and sport-tuned handling. Expect availability soon.</p>
-<div class="specs" role="list">
-<div class="spec"><small>Model</small>320I</div>
-<div class="spec"><small>Transmission</small>Automatic</div>
-<div class="spec"><small>Mileage</small>148,500</div>
-<div class="spec"><small>Status</small>Coming Soon</div>
-</div>
-</div>
-</article>
-<!-- Item 4: 2015 BMW X3 sDrive28i -->
-<article class="inventory-item fade-up" tabindex="0">
-<figure class="vehicle-figure gallery-trigger" data-vehicle="bmw-x3">
-<img loading="lazy" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765585361/car-2220016_rkhoia.jpg" alt="2015 BMW X3 sDrive28i">
-<div style="position:absolute;top:12px;right:12px;background:rgba(0,0,0,0.75);color:#fff;padding:0.5rem 0.75rem;border-radius:6px;font-weight:700;font-size:0.85rem;z-index:10;">Coming Soon</div>
-</figure>
-<div class="vehicle-meta">
-<div class="kicker">2015 • BMW</div>
-<h2 class="vehicle-title">2015 BMW X3 sDrive28i</h2>
-<p class="vehicle-copy">Premium compact luxury SUV with sophisticated styling and dynamic performance. Coming to our inventory soon.</p>
-<div class="specs" role="list">
-<div class="spec"><small>Model</small>X3 sDrive28i</div>
-<div class="spec"><small>Transmission</small>Automatic</div>
-<div class="spec"><small>Mileage</small>110,000</div>
-<div class="spec"><small>Status</small>Coming Soon</div>
-</div>
-</div>
-</article>
-</div>
+  <div class="inventory-list">
+    <!-- Item 1: 2011 Mitsubishi Lancer Evolution X -->
+    <article class="inventory-item fade-up" tabindex="0">
+      <figure class="vehicle-figure gallery-trigger" data-vehicle="evo-x">
+        <img loading="lazy" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1763704651/PXL_20250927_201523836_2_qrvwkh.jpg" alt="2011 Mitsubishi Lancer Evolution X">
+      </figure>
+      <div class="vehicle-meta">
+        <div class="kicker">2011 • Mitsubishi</div>
+        <h2 class="vehicle-title">2011 Mitsubishi Lancer Evolution X</h2>
+        <p class="vehicle-copy">High-performance sports sedan with iconic design and thrilling driving dynamics. This well-maintained Evolution X is ready to deliver an exceptional driving experience.</p>
+        <div class="specs" role="list">
+          <div class="spec"><small>Model</small>Lancer Evo X</div>
+          <div class="spec"><small>Transmission</small>5-Speed Manual</div>
+          <div class="spec"><small>Mileage</small>100,600</div>
+          <div class="spec"><small>Price</small>$20,000</div>
+        </div>
+      </div>
+    </article>
+    <!-- Item 2: 2014 Hyundai Veloster -->
+    <article class="inventory-item fade-up" tabindex="0">
+      <figure class="vehicle-figure gallery-trigger" data-vehicle="veloster">
+        <img loading="lazy" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765482143/PXL_20251129_233513135_yl1gxw.jpg" alt="2014 Hyundai Veloster">
+      </figure>
+      <div class="vehicle-meta">
+        <div class="kicker">2014 • Hyundai</div>
+        <h2 class="vehicle-title">2014 Hyundai Veloster</h2>
+        <p class="vehicle-copy">Stylish hatchback with distinctive three-door design and fun driving characteristics. Perfect for those seeking a practical yet spirited vehicle with great value.</p>
+        <div class="specs" role="list">
+          <div class="spec"><small>Model</small>Veloster</div>
+          <div class="spec"><small>Transmission</small>6-Speed Manual</div>
+          <div class="spec"><small>Mileage</small>122,686</div>
+          <div class="spec"><small>Price</small>$5,000</div>
+        </div>
+      </div>
+    </article>
+    <!-- Item 3: 2016 BMW 320I -->
+    <article class="inventory-item fade-up" tabindex="0">
+      <figure class="vehicle-figure gallery-trigger" data-vehicle="bmw-320i">
+        <img loading="lazy" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765585700/automobile-1834274_mpbjda.jpg" alt="2016 BMW 320I">
+        <div style="position:absolute;top:12px;right:12px;background:rgba(0,0,0,0.75);color:#fff;padding:0.5rem 0.75rem;border-radius:6px;font-weight:700;font-size:0.85rem;z-index:10;">Coming Soon</div>
+      </figure>
+      <div class="vehicle-meta">
+        <div class="kicker">2016 • BMW</div>
+        <h2 class="vehicle-title">2016 BMW 320I</h2>
+        <p class="vehicle-copy">Luxury compact sedan with refined German engineering and sport-tuned handling. Expect availability soon.</p>
+        <div class="specs" role="list">
+          <div class="spec"><small>Model</small>320I</div>
+          <div class="spec"><small>Transmission</small>Automatic</div>
+          <div class="spec"><small>Mileage</small>148,500</div>
+          <div class="spec"><small>Status</small>Coming Soon</div>
+        </div>
+      </div>
+    </article>
+    <!-- Item 4: 2015 BMW X3 sDrive28i -->
+    <article class="inventory-item fade-up" tabindex="0">
+      <figure class="vehicle-figure gallery-trigger" data-vehicle="bmw-x3">
+        <img loading="lazy" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765585361/car-2220016_rkhoia.jpg" alt="2015 BMW X3 sDrive28i">
+        <div style="position:absolute;top:12px;right:12px;background:rgba(0,0,0,0.75);color:#fff;padding:0.5rem 0.75rem;border-radius:6px;font-weight:700;font-size:0.85rem;z-index:10;">Coming Soon</div>
+      </figure>
+      <div class="vehicle-meta">
+        <div class="kicker">2015 • BMW</div>
+        <h2 class="vehicle-title">2015 BMW X3 sDrive28i</h2>
+        <p class="vehicle-copy">Premium compact luxury SUV with sophisticated styling and dynamic performance. Coming to our inventory soon.</p>
+        <div class="specs" role="list">
+          <div class="spec"><small>Model</small>X3 sDrive28i</div>
+          <div class="spec"><small>Transmission</small>Automatic</div>
+          <div class="spec"><small>Mileage</small>110,000</div>
+          <div class="spec"><small>Status</small>Coming Soon</div>
+        </div>
+      </div>
+    </article>
+  </div>
 </main>
 <footer>
-<p>&copy; 2025 Veritas Motor Group — Serving the community with integrity.</p>
-<p>1289 Reamwood Ave Suite C, Sunnyvale, CA 94089</p>
-<p>(408) 213-7456</p>
+  <p>&copy; 2025 Veritas Motor Group — Serving the community with integrity.</p>
+  <p>1289 Reamwood Ave Suite C, Sunnyvale, CA 94089</p>
+  <p>(408) 213-7456</p>
 </footer>
 <!-- Contact Modal -->
 <div class="modal" id="modalContact" aria-hidden="true" role="dialog" aria-label="Contact form">
-<div class="modal-card" role="document">
-<div class="modal-header">
-<h3>Contact us about a vehicle</h3>
-<button class="modal-close" aria-label="Close">✕</button>
-</div>
-<form id="contactForm">
-<div class="field">
-<label for="name">Your name</label>
-<input id="name" name="name" type="text" placeholder="Jane Buyer" required>
-</div>
-<div class="field">
-<label for="email">Email</label>
-<input id="email" name="email" type="email" placeholder="you@email.com" required>
-</div>
-<div class="field">
-<label for="message">Message</label>
-<textarea id="message" name="message" rows="4" placeholder="Interested in the vehicle" required></textarea>
-</div>
-<div class="modal-actions">
-<button type="button" class="btn secondary modal-cancel">Cancel</button>
-<button type="submit" class="btn">Send</button>
-</div>
-<p class="muted" style="margin-top:.65rem">Submitting will open your email client. For production, connect this form to a backend or form service.</p>
-</form>
-</div>
+  <div class="modal-card" role="document">
+    <div class="modal-header">
+      <h3>Contact us about a vehicle</h3>
+      <button class="modal-close" aria-label="Close">✕</button>
+    </div>
+    <form id="contactForm">
+      <div class="field">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" placeholder="Jane Buyer" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@email.com" required>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Interested in the vehicle" required></textarea>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn secondary modal-cancel">Cancel</button>
+        <button type="submit" class="btn">Send</button>
+      </div>
+      <p class="muted" style="margin-top:.65rem">Submitting will open your email client. For production, connect this form to a backend or form service.</p>
+    </form>
+  </div>
 </div>
 <!-- Gallery Modal -->
 <div class="gallery-modal" id="galleryModal" aria-hidden="true" role="dialog" aria-label="Image gallery">
-<div class="gallery-container">
-<button class="gallery-close-btn" aria-label="Close gallery">✕</button>
-<div class="gallery-main">
-<img id="galleryMainImage" src="" alt="Vehicle image">
-<div class="gallery-counter">
-<span id="galleryCounter">1</span> / <span id="galleryTotal">0</span>
-</div>
-</div>
-<div class="gallery-controls">
-<button class="gallery-btn" id="galleryPrev" aria-label="Previous image">← Previous</button>
-<button class="gallery-btn" id="galleryNext" aria-label="Next image">Next →</button>
-</div>
-<div class="gallery-thumbnails" id="galleryThumbnails"></div>
-</div>
+  <div class="gallery-container">
+    <button class="gallery-close-btn" aria-label="Close gallery">✕</button>
+    <div class="gallery-main">
+      <img id="galleryMainImage" src="" alt="Vehicle image">
+      <div class="gallery-counter">
+        <span id="galleryCounter">1</span> / <span id="galleryTotal">0</span>
+      </div>
+    </div>
+    <div class="gallery-controls">
+      <button class="gallery-btn" id="galleryPrev" aria-label="Previous image">← Previous</button>
+      <button class="gallery-btn" id="galleryNext" aria-label="Next image">Next →</button>
+    </div>
+    <div class="gallery-thumbnails" id="galleryThumbnails"></div>
+  </div>
 </div>
 <script>
 // Vehicle gallery data
 const vehicleGalleries = {
-'evo-x': [
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520970/PXL_20250927_201523836_2_tijofh.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520976/PXL_20250927_201407984.MP_2_b4hmos.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520975/PXL_20250927_201413978.MP_2_mpxvht.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520975/PXL_20250927_201419782.MP_2_hpwowk.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520974/PXL_20250927_201424721.MP_2_vedjrq.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520971/PXL_20250927_201434975.MP_2_k3vvn5.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520970/PXL_20250927_201440636.MP_2_rs7tur.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765521376/PXL_20250927_201445604.MP_2_aujw0t.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520982/PXL_20250927_201628645.MP_2_l3cj7z.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520970/PXL_20250927_201610893_2_mbgblv.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520966/PXL_20250927_201641205.MP_fcb7tg.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520966/PXL_20250927_201645529.MP_hctlga.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520966/PXL_20250927_201652647.MP_hj3ajy.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520981/PXL_20250927_201714855.MP_2_qhbnjy.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520966/PXL_20250927_201701874.MP_oxrfhd.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520966/PXL_20250927_201708903.MP_nqgaoz.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520976/PXL_20250927_201737466_2_lor2nf.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520965/PXL_20250927_201838170_2_rokaks.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520965/PXL_20250927_201754508_wvixmf.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520975/PXL_20250927_201747559_e3mvue.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520965/PXL_20250927_201808961.MP_pqtpmp.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520965/PXL_20250927_201802433_omu7hf.jpg',
-],
-'veloster': [
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523394/PXL_20251129_233513135_tj2zn8.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523382/PXL_20251129_233521948_nkw0c4.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523386/PXL_20251129_233640812_m08o1x.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523374/PXL_20251129_233645618_wm1c7o.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523386/PXL_20251129_233652385_zmilwl.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523394/PXL_20251129_233702156_hde3d0.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523392/PXL_20251129_233709560_f62y4c.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523392/PXL_20251129_233714715_nm1ecd.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523382/PXL_20251129_234511871_bx5tfa.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523374/PXL_20251129_233845733_otk203.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523387/PXL_20251129_233854835_e5pv9o.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523373/PXL_20251129_233911952_mtwzyi.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523393/PXL_20251129_234428456_hyeoak.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523378/PXL_20251129_234053564_pyfnt2.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523374/PXL_20251129_234108294_hfdmx2.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523382/PXL_20251129_233805293_ubbblo.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523378/PXL_20251129_234145757_xx8ujc.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523374/PXL_20251129_233722092_xftsiv.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523377/PXL_20251129_233727959.MP_qvrq1h.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523381/PXL_20251129_233741172_bhkhzx.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523389/PXL_20251129_233748453_mxvcrr.jpg',
-]
+  'evo-x': [
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520970/PXL_20250927_201523836_2_tijofh.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520976/PXL_20250927_201407984.MP_2_b4hmos.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520975/PXL_20250927_201413978.MP_2_mpxvht.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520975/PXL_20250927_201419782.MP_2_hpwowk.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520974/PXL_20250927_201424721.MP_2_vedjrq.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520971/PXL_20250927_201434975.MP_2_k3vvn5.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520970/PXL_20250927_201440636.MP_2_rs7tur.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765521376/PXL_20250927_201445604.MP_2_aujw0t.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520982/PXL_20250927_201628645.MP_2_l3cj7z.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520970/PXL_20250927_201610893_2_mbgblv.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520966/PXL_20250927_201641205.MP_fcb7tg.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520966/PXL_20250927_201645529.MP_hctlga.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520966/PXL_20250927_201652647.MP_hj3ajy.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520981/PXL_20250927_201714855.MP_2_qhbnjy.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520966/PXL_20250927_201701874.MP_oxrfhd.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520966/PXL_20250927_201708903.MP_nqgaoz.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520976/PXL_20250927_201737466_2_lor2nf.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520965/PXL_20250927_201838170_2_rokaks.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520965/PXL_20250927_201754508_wvixmf.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520975/PXL_20250927_201747559_e3mvue.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520965/PXL_20250927_201808961.MP_pqtpmp.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765520965/PXL_20250927_201802433_omu7hf.jpg',
+  ],
+  'veloster': [
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523394/PXL_20251129_233513135_tj2zn8.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523382/PXL_20251129_233521948_nkw0c4.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523386/PXL_20251129_233640812_m08o1x.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523374/PXL_20251129_233645618_wm1c7o.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523386/PXL_20251129_233652385_zmilwl.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523394/PXL_20251129_233702156_hde3d0.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523392/PXL_20251129_233709560_f62y4c.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523392/PXL_20251129_233714715_nm1ecd.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523382/PXL_20251129_234511871_bx5tfa.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523374/PXL_20251129_233845733_otk203.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523387/PXL_20251129_233854835_e5pv9o.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523373/PXL_20251129_233911952_mtwzyi.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523393/PXL_20251129_234428456_hyeoak.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523378/PXL_20251129_234053564_pyfnt2.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523374/PXL_20251129_234108294_hfdmx2.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523382/PXL_20251129_233805293_ubbblo.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523378/PXL_20251129_234145757_xx8ujc.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523374/PXL_20251129_233722092_xftsiv.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523377/PXL_20251129_233727959.MP_qvrq1h.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523381/PXL_20251129_233741172_bhkhzx.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765523389/PXL_20251129_233748453_mxvcrr.jpg',
+  ]
 };
 let currentGallery = [];
 let currentImageIndex = 0;
@@ -566,76 +576,76 @@ const galleryThumbnails = document.getElementById('galleryThumbnails');
 const galleryCloseBtn = document.querySelector('.gallery-close-btn');
 // Initialize gallery
 function initGallery(vehicleId) {
-currentGallery = vehicleGalleries[vehicleId] || [];
-currentImageIndex = 0;
-if (currentGallery.length === 0) return;
-// Update total count
-galleryTotal.textContent = currentGallery.length;
-// Build thumbnails
-galleryThumbnails.innerHTML = '';
-currentGallery.forEach((img, idx) => {
-const thumb = document.createElement('div');
-thumb.className = 'gallery-thumb' + (idx === 0 ? ' active' : '');
-thumb.innerHTML = `<img src="${img}" alt="Thumbnail ${idx + 1}">`;
-thumb.addEventListener('click', () => goToImage(idx));
-galleryThumbnails.appendChild(thumb);
-});
-updateGalleryDisplay();
-galleryModal.classList.add('open');
-galleryModal.setAttribute('aria-hidden', 'false');
+  currentGallery = vehicleGalleries[vehicleId] || [];
+  currentImageIndex = 0;
+  if (currentGallery.length === 0) return;
+  // Update total count
+  galleryTotal.textContent = currentGallery.length;
+  // Build thumbnails
+  galleryThumbnails.innerHTML = '';
+  currentGallery.forEach((img, idx) => {
+    const thumb = document.createElement('div');
+    thumb.className = 'gallery-thumb' + (idx === 0 ? ' active' : '');
+    thumb.innerHTML = `<img src="${img}" alt="Thumbnail ${idx + 1}">`;
+    thumb.addEventListener('click', () => goToImage(idx));
+    galleryThumbnails.appendChild(thumb);
+  });
+  updateGalleryDisplay();
+  galleryModal.classList.add('open');
+  galleryModal.setAttribute('aria-hidden', 'false');
 }
 function updateGalleryDisplay() {
-galleryMainImage.src = currentGallery[currentImageIndex];
-galleryCounter.textContent = currentImageIndex + 1;
-// Update thumbnails
-document.querySelectorAll('.gallery-thumb').forEach((thumb, idx) => {
-thumb.classList.toggle('active', idx === currentImageIndex);
-});
-// Update button states
-galleryPrev.disabled = currentImageIndex === 0;
-galleryNext.disabled = currentImageIndex === currentGallery.length - 1;
+  galleryMainImage.src = currentGallery[currentImageIndex];
+  galleryCounter.textContent = currentImageIndex + 1;
+  // Update thumbnails
+  document.querySelectorAll('.gallery-thumb').forEach((thumb, idx) => {
+    thumb.classList.toggle('active', idx === currentImageIndex);
+  });
+  // Update button states
+  galleryPrev.disabled = currentImageIndex === 0;
+  galleryNext.disabled = currentImageIndex === currentGallery.length - 1;
 }
 function goToImage(index) {
-if (index >= 0 && index < currentGallery.length) {
-currentImageIndex = index;
-updateGalleryDisplay();
-}
+  if (index >= 0 && index < currentGallery.length) {
+    currentImageIndex = index;
+    updateGalleryDisplay();
+  }
 }
 function closeGallery() {
-galleryModal.classList.remove('open');
-galleryModal.setAttribute('aria-hidden', 'true');
+  galleryModal.classList.remove('open');
+  galleryModal.setAttribute('aria-hidden', 'true');
 }
 // Event listeners
 document.querySelectorAll('.gallery-trigger').forEach(el => {
-el.addEventListener('click', () => {
-const vehicleId = el.dataset.vehicle;
-initGallery(vehicleId);
-});
+  el.addEventListener('click', () => {
+    const vehicleId = el.dataset.vehicle;
+    initGallery(vehicleId);
+  });
 });
 galleryPrev.addEventListener('click', () => {
-if (currentImageIndex > 0) goToImage(currentImageIndex - 1);
+  if (currentImageIndex > 0) goToImage(currentImageIndex - 1);
 });
 galleryNext.addEventListener('click', () => {
-if (currentImageIndex < currentGallery.length - 1) goToImage(currentImageIndex + 1);
+  if (currentImageIndex < currentGallery.length - 1) goToImage(currentImageIndex + 1);
 });
 galleryCloseBtn.addEventListener('click', closeGallery);
 // Close on background click
 galleryModal.addEventListener('click', e => {
-if (e.target === galleryModal) closeGallery();
+  if (e.target === galleryModal) closeGallery();
 });
 // Keyboard controls
 document.addEventListener('keydown', e => {
-if (galleryModal.classList.contains('open')) {
-if (e.key === 'ArrowLeft') galleryPrev.click();
-if (e.key === 'ArrowRight') galleryNext.click();
-if (e.key === 'Escape') closeGallery();
-}
+  if (galleryModal.classList.contains('open')) {
+    if (e.key === 'ArrowLeft') galleryPrev.click();
+    if (e.key === 'ArrowRight') galleryNext.click();
+    if (e.key === 'Escape') closeGallery();
+  }
 });
 // Fade-in observer
 const observer = new IntersectionObserver(entries => {
-entries.forEach(e => {
-if (e.isIntersecting) e.target.classList.add('visible');
-});
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
 }, { threshold:0.12 });
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 // Contact Modal
@@ -644,41 +654,41 @@ const modalClose = document.querySelector('.modal-close');
 const modalCancel = document.querySelector('.modal-cancel');
 let lastFocusedElement = null;
 function openModal(prefill=""){
-lastFocusedElement = document.activeElement;
-modal.classList.add('open');
-modal.setAttribute('aria-hidden','false');
-document.getElementById('message').value = prefill;
-requestAnimationFrame(() => document.getElementById('name').focus());
+  lastFocusedElement = document.activeElement;
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden','false');
+  document.getElementById('message').value = prefill;
+  requestAnimationFrame(() => document.getElementById('name').focus());
 }
 function closeModal(){
-modal.classList.remove('open');
-modal.setAttribute('aria-hidden','true');
-if(lastFocusedElement) lastFocusedElement.focus();
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden','true');
+  if(lastFocusedElement) lastFocusedElement.focus();
 }
 document.querySelectorAll('.inquire').forEach(btn => {
-btn.addEventListener('click', e => {
-e.preventDefault();
-openModal(`Interested in the ${btn.dataset.title}`);
-});
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    openModal(`Interested in the ${btn.dataset.title}`);
+  });
 });
 document.querySelector('.open-contact').addEventListener('click', e => {
-e.preventDefault();
-openModal();
+  e.preventDefault();
+  openModal();
 });
 modalClose.addEventListener('click', closeModal);
 modalCancel.addEventListener('click', closeModal);
 modal.addEventListener('click', e => {
-if (e.target === modal) closeModal();
+  if (e.target === modal) closeModal();
 });
 // Form → mailto fallback
 document.getElementById('contactForm').addEventListener('submit', e => {
-e.preventDefault();
-const name = encodeURIComponent(document.getElementById('name').value);
-const email = encodeURIComponent(document.getElementById('email').value);
-const message = encodeURIComponent(document.getElementById('message').value);
-const subject = encodeURIComponent('Vehicle inquiry from website');
-const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-window.location.href = `mailto:alan@veritasmotorgroup.com?subject=${subject}&body=${body}`;
+  e.preventDefault();
+  const name = encodeURIComponent(document.getElementById('name').value);
+  const email = encodeURIComponent(document.getElementById('email').value);
+  const message = encodeURIComponent(document.getElementById('message').value);
+  const subject = encodeURIComponent('Vehicle inquiry from website');
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+  window.location.href = `mailto:alan@veritasmotorgroup.com?subject=${subject}&body=${body}`;
 });
 </script>
 </body>
