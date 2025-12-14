@@ -842,8 +842,10 @@ if (e.target === modal) closeModal();
 // Logo button - scroll to top
 document.getElementById('logoBtn').addEventListener('click', (e) => {
 e.preventDefault();
+const header = document.querySelector('header');
+const headerHeight = header.offsetHeight;
 window.scrollTo({
-top: 0,
+top: -headerHeight,
 behavior: 'smooth'
 });
 });
