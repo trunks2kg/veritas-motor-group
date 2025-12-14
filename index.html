@@ -63,7 +63,6 @@ align-items:center;
 gap:12px;
 text-decoration:none;
 color:var(--text);
-cursor:pointer;
 border:none;
 background:none;
 padding:0;
@@ -495,11 +494,11 @@ width:60px;height:60px
 <body>
 <header>
 <div class="site-inner">
-<button class="brand" id="logoBtn" aria-label="Back to top">
+<a href="#" class="brand">
 <div class="brand-logo">
 <img src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765567703/ChatGPT_Image_Dec_12_2025_11_28_07_AM_ywnvbz.jpg" alt="Veritas Motor Group">
 </div>
-</button>
+</a>
 <nav aria-label="Primary navigation">
 <button class="nav-link" id="inventoryBtn">Inventory</button>
 <button class="nav-link" id="contactBtn">Contact</button>
@@ -839,13 +838,11 @@ modalCancel.addEventListener('click', closeModal);
 modal.addEventListener('click', e => {
 if (e.target === modal) closeModal();
 });
-// Logo button - scroll to top
-document.getElementById('logoBtn').addEventListener('click', (e) => {
+// Logo link - scroll to top
+document.querySelector('.brand').addEventListener('click', (e) => {
 e.preventDefault();
-const header = document.querySelector('header');
-const headerHeight = header.offsetHeight;
 window.scrollTo({
-top: -headerHeight,
+top: 0,
 behavior: 'smooth'
 });
 });
