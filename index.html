@@ -308,6 +308,13 @@ animation:slideDown 0.3s ease;
 .form-success.show {
 display:block;
 }
+/* Honeypot field - hidden from users */
+.hp-field {
+position:absolute;
+left:-9999px;
+opacity:0;
+pointer-events:none;
+}
 @keyframes slideDown {
 from {
 opacity:0;
@@ -718,6 +725,11 @@ width:60px;height:60px
 <label for="contact-message">Message</label>
 <textarea id="contact-message" name="message" placeholder="Tell us which vehicle you're interested in or any questions you have..." required></textarea>
 </div>
+<!-- Honeypot field for spam protection -->
+<div class="hp-field">
+<label for="contact-website">Website</label>
+<input type="text" id="contact-website" name="_gotcha" autocomplete="off">
+</div>
 <div class="form-actions">
 <button type="submit" class="btn">Send Message</button>
 <button type="reset" class="btn secondary">Clear</button>
@@ -751,6 +763,11 @@ width:60px;height:60px
 <div class="field">
 <label for="modal-message">Message</label>
 <textarea id="modal-message" name="message" rows="4" placeholder="Interested in the vehicle" required></textarea>
+</div>
+<!-- Honeypot field for spam protection -->
+<div class="hp-field">
+<label for="modal-website">Website</label>
+<input type="text" id="modal-website" name="_gotcha" autocomplete="off">
 </div>
 <div class="modal-actions">
 <button type="button" class="btn secondary modal-cancel">Cancel</button>
@@ -841,7 +858,7 @@ const vehicleGalleries = {
 'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855490/PXL_20251216_011352846_dwvjf7.jpg',
 'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855488/PXL_20251216_011347235_marvlm.jpg',
 'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855481/PXL_20251216_011112292.MP_zmo3h8.jpg',
-'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855483/PXL_20251216_011119587.MP_go4u5w.jpg',
+'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855483/PXL_20251216_011119587.MP_go4w5w.jpg',
 'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855482/PXL_20251216_011032373.MP_cmnxbd.jpg',
 'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855478/PXL_20251216_011040089_sslliu.jpg',
 'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855486/PXL_20251216_011204209_ygsfvc.jpg',
