@@ -679,26 +679,6 @@ width:60px;height:60px
 <main id="main-content">
 <div id="inventory-anchor" style="scroll-margin-top: 120px;"></div>
 <div id="inventory" class="inventory-list" aria-label="Vehicle inventory">
-<!-- Item 3: 2016 BMW 320I -->
-<article class="inventory-item fade-up" aria-labelledby="veh-2016-bmw-320i-title">
-<figure class="vehicle-figure gallery-trigger" data-vehicle="bmw-320i" role="button" tabindex="0" aria-label="Open image gallery for 2016 BMW 320I">
-<img loading="lazy" decoding="async" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855474/PXL_20251216_010906206_anixx3.jpg" alt="Front three-quarter view of 2016 BMW 320I" width="560" height="420">
-</figure>
-<div class="vehicle-meta">
-<div class="kicker">2016 • BMW</div>
-<h2 class="vehicle-title" id="veh-2016-bmw-320i-title">2016 BMW 320I</h2>
-<p class="vehicle-copy">Iconic BMW engineering meets everyday elegance. This 320i blends precision handling with sophisticated comfort—perfect for drivers who refuse to compromise between sport and refinement. Feel the difference quality makes.</p>
-<div class="specs" role="list">
-<div class="spec" role="listitem"><small>Model</small>320I</div>
-<div class="spec" role="listitem"><small>Transmission</small>Automatic</div>
-<div class="spec" role="listitem"><small>Mileage</small>148,650</div>
-<div class="spec" role="listitem"><small>Price</small>$5,495</div>
-</div>
-<div class="actions">
-<button class="btn" type="button" onclick="openModal('2016 BMW 320I')" aria-haspopup="dialog">Request Info</button>
-</div>
-</div>
-</article>
 <!-- Item 4: 2015 BMW X3 sDrive28i -->
 <article class="inventory-item fade-up" aria-labelledby="veh-2015-bmw-x3-title">
 <figure class="vehicle-figure vehicle-coming-soon gallery-trigger" data-vehicle="bmw-x3" role="button" tabindex="0" aria-label="Open image gallery for 2015 BMW X3 sDrive28i">
@@ -869,31 +849,7 @@ and we will make every reasonable effort to assist you.
 <script>
 // Vehicle gallery data
 const vehicleGalleries = {
-  'bmw-320i': [
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855474/PXL_20251216_010906206_anixx3.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855473/PXL_20251216_010834238_zljqih.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855463/PXL_20251216_010825593_ylqqua.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855463/PXL_20251216_010820392_hamezr.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855462/PXL_20251216_010813878_zgualk.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855458/PXL_20251216_010805761_xpv78o.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855460/PXL_20251216_010754809_korqyg.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855459/PXL_20251216_010747783_uvu2jw.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855485/PXL_20251216_011145911.MP_opgbza.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855491/PXL_20251216_011300827.MP_bs1fmr.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855487/PXL_20251216_011320902_qcfom9.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855490/PXL_20251216_011352846_dwvjf7.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855488/PXL_20251216_011347235_marvlm.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855481/PXL_20251216_011112292.MP_zmo3h8.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855483/PXL_20251216_011119587.MP_go4w5w.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855482/PXL_20251216_011032373.MP_cmnxbd.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855478/PXL_20251216_011040089_sslliu.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855486/PXL_20251216_011204209_ygsfvc.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855478/PXL_20251216_011128239_yhcntc.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855472/PXL_20251216_010949958_bkvkm6.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855472/PXL_20251216_010959449_xaol9y.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855473/PXL_20251216_011007966_j4pcgw.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1765855472/PXL_20251216_011014895_evakzk.jpg'
-  ]
+  // Add other vehicles here when ready, e.g. 'bmw-x3': [ ... ]
 };
 
 let currentGallery = [];
