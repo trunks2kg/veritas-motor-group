@@ -679,24 +679,29 @@ width:60px;height:60px
 <main id="main-content">
 <div id="inventory-anchor" style="scroll-margin-top: 120px;"></div>
 <div id="inventory" class="inventory-list" aria-label="Vehicle inventory">
-<!-- Item 4: 2015 BMW X3 sDrive28i -->
-<article class="inventory-item fade-up" aria-labelledby="veh-2015-bmw-x3-title">
-<figure class="vehicle-figure vehicle-coming-soon gallery-trigger" data-vehicle="bmw-x3" role="button" tabindex="0" aria-label="Open image gallery for 2015 BMW X3 sDrive28i">
-<img loading="lazy" decoding="async" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765585361/car-2220016_rkhoia.jpg" alt="2015 BMW X3 sDrive28i in motion on a road" width="560" height="420">
+
+<!-- Item 1: 2011 Mitsubishi Lancer Evolution X -->
+<article class="inventory-item fade-up">
+<figure class="vehicle-figure gallery-trigger" data-vehicle="evo-x">
+<img loading="lazy" decoding="async" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1763704651/PXL_20250927_201523836_2_qrvwkh.jpg" alt="2011 Mitsubishi Lancer Evolution X" width="560" height="420">
 </figure>
 <div class="vehicle-meta">
-<div class="kicker">2015 • BMW</div>
-<h2 class="vehicle-title" id="veh-2015-bmw-x3-title">2015 BMW X3 sDrive28i</h2>
-<p class="vehicle-copy">Premium compact luxury SUV with sophisticated styling and dynamic performance. Coming to our inventory soon.</p>
+<div class="kicker">2011 • Mitsubishi</div>
+<h2 class="vehicle-title">2011 Mitsubishi Lancer Evolution X</h2>
+<p class="vehicle-copy">High-performance sports sedan with iconic design and thrilling driving dynamics. This well-maintained Evolution X is ready to deliver an exceptional driving experience.</p>
 <div class="specs" role="list">
-<div class="spec" role="listitem"><small>Model</small>X3 sDrive28i</div>
-<div class="spec" role="listitem"><small>Transmission</small>Automatic</div>
-<div class="spec" role="listitem"><small>Mileage</small>110,000</div>
-<div class="spec" role="listitem"><small>Status</small>Coming Soon</div>
+<div class="spec"><small>Model</small>Lancer Evo X</div>
+<div class="spec"><small>Transmission</small>5-Speed Manual</div>
+<div class="spec"><small>Mileage</small>100,600</div>
+<div class="spec"><small>Price</small>$18,995</div>
+</div>
+<div class="actions">
+<button class="btn" onclick="openModal('2011 Mitsubishi Lancer Evolution X')">Request Info</button>
 </div>
 </div>
 </article>
-<!-- Item 5: 2010 Ford F-150 Raptor -->
+
+<!-- Item 2: 2010 Ford F-150 Raptor Coming Soon -->
 <article class="inventory-item fade-up" aria-labelledby="veh-2010-f150-raptor-title">
 <figure class="vehicle-figure vehicle-coming-soon">
 <img loading="lazy" decoding="async" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765603249/joey-chacon-wyVdoMqF184-unsplash_wdwkoo.jpg" alt="2010 Ford F-150 Raptor off-road" width="560" height="420">
@@ -713,7 +718,8 @@ width:60px;height:60px
 </div>
 </div>
 </article>
-<!-- Item 6: 2015 Audi S3 Coming Soon -->
+
+<!-- Item 3: 2015 Audi S3 Coming Soon -->
 <article class="inventory-item fade-up" aria-labelledby="veh-2015-audi-s3-title">
 <figure class="vehicle-figure vehicle-coming-soon">
 <img loading="lazy" decoding="async" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1767077641/lance-anderson-ywzVSyBdts0-unsplash_akwmya.jpg" alt="2015 Audi S3 parked in an urban setting" width="560" height="420">
@@ -730,6 +736,7 @@ width:60px;height:60px
 </div>
 </div>
 </article>
+
 </div>
 
 <!-- Contact Form Section -->
@@ -849,7 +856,10 @@ and we will make every reasonable effort to assist you.
 <script>
 // Vehicle gallery data
 const vehicleGalleries = {
-  // Add other vehicles here when ready, e.g. 'bmw-x3': [ ... ]
+  // Evo gallery; add more URLs here if you have extra angles
+  'evo-x': [
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1763704651/PXL_20250927_201523836_2_qrvwkh.jpg'
+  ]
 };
 
 let currentGallery = [];
