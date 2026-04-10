@@ -680,7 +680,28 @@ width:60px;height:60px
 <div id="inventory-anchor" style="scroll-margin-top: 120px;"></div>
 <div id="inventory" class="inventory-list" aria-label="Vehicle inventory">
 
-<!-- Item: 2010 Ford F-150 Raptor -->
+<!-- Item 1: 2014 Fiat 500 -->
+<article class="inventory-item fade-up">
+<figure class="vehicle-figure gallery-trigger" data-vehicle="fiat-500">
+<img loading="lazy" decoding="async" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861855/PXL_20260409_204405145.MP_2_vvgigi.jpg" alt="2014 Fiat 500" width="560" height="420">
+</figure>
+<div class="vehicle-meta">
+<div class="kicker">2014 • Fiat</div>
+<h2 class="vehicle-title">2014 Fiat 500</h2>
+<p class="vehicle-copy">A stylish and efficient city car with a fun driving feel, compact footprint, and standout European design. This Fiat 500 is a great everyday commuter with personality.</p>
+<div class="specs" role="list">
+<div class="spec"><small>Model</small>500</div>
+<div class="spec"><small>Transmission</small>Automatic</div>
+<div class="spec"><small>Mileage</small>142,660</div>
+<div class="spec"><small>Price</small>$4,495</div>
+</div>
+<div class="actions">
+<button class="btn" onclick="openModal('2014 Fiat 500')">Request Info</button>
+</div>
+</div>
+</article>
+
+<!-- Item 2: 2010 Ford F-150 Raptor -->
 <article class="inventory-item fade-up" aria-labelledby="veh-2010-f150-raptor-title">
 <figure class="vehicle-figure vehicle-coming-soon">
 <img loading="lazy" decoding="async" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765603249/joey-chacon-wyVdoMqF184-unsplash_wdwkoo.jpg" alt="2010 Ford F-150 Raptor off-road" width="560" height="420">
@@ -698,7 +719,7 @@ width:60px;height:60px
 </div>
 </article>
 
-<!-- Item: 2015 Audi S3 Coming Soon -->
+<!-- Item 3: 2015 Audi S3 Coming Soon -->
 <article class="inventory-item fade-up" aria-labelledby="veh-2015-audi-s3-title">
 <figure class="vehicle-figure vehicle-coming-soon">
 <img loading="lazy" decoding="async" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1767077641/lance-anderson-ywzVSyBdts0-unsplash_akwmya.jpg" alt="2015 Audi S3 parked in an urban setting" width="560" height="420">
@@ -835,7 +856,31 @@ and we will make every reasonable effort to assist you.
 <script>
 // Vehicle gallery data
 const vehicleGalleries = {
-  // Evo removed; add other vehicles here when ready.
+  'fiat-500': [
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861855/PXL_20260409_204405145.MP_2_vvgigi.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861855/PXL_20260409_204356019.MP_2_kczetj.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861856/PXL_20260409_204452381.MP_2_twigj6.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861856/PXL_20260409_204446398.MP_2_y2sn3i.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861856/PXL_20260409_204439535.MP_2_hbiuae.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861856/PXL_20260409_204430696.MP_2_nuyfhy.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861855/PXL_20260409_204419172.MP_2_uirnbi.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861856/PXL_20260409_204411419.MP_2_r67e0l.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861864/PXL_20260409_204541630.MP_fwmm8y.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861862/PXL_20260409_204651066_ytn6ox.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861858/PXL_20260409_211312915_2_xrhs6o.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861859/PXL_20260409_211321692_2_xzbvnd.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861859/PXL_20260409_211402853_2_vp2vdk.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861862/PXL_20260409_211428331.MP_w16aul.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861861/PXL_20260409_211449554_brg7fk.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861862/PXL_20260409_204640194_c1tkzx.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861857/PXL_20260409_204505138.MP_2_wnw6vl.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861858/PXL_20260409_204519727.MP_2_ieehx7.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861859/PXL_20260409_211537909.MP_2_lf1h5w.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861860/PXL_20260409_211646244_qo73ql.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861860/PXL_20260409_211638753_h1dtkl.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861860/PXL_20260409_211627352_ko4uio.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1775861861/PXL_20260409_211606432_amjurx.jpg'
+  ]
 };
 
 let currentGallery = [];
@@ -930,7 +975,6 @@ document.addEventListener('keydown', e => {
     if (e.key === 'ArrowLeft') galleryPrev.click();
     if (e.key === 'ArrowRight') galleryNext.click();
     if (e.key === 'Escape') closeGallery();
-    // Simple focus trap
     if (e.key === 'Tab') {
       const focusable = galleryModal.querySelectorAll('button, [href], input, textarea, [tabindex]:not([tabindex="-1"])');
       const focusArray = Array.prototype.slice.call(focusable);
@@ -983,7 +1027,6 @@ modal.addEventListener('click', e => {
   if (e.target === modal) closeModal();
 });
 
-// Focus trap for modal
 document.addEventListener('keydown', e => {
   if (modal.classList.contains('open')) {
     if (e.key === 'Escape') {
@@ -998,22 +1041,17 @@ document.addEventListener('keydown', e => {
         last.focus();
       } else if (!e.shiftKey && document.activeElement === last) {
         e.preventDefault();
-       first.focus();
+        first.focus();
       }
     }
   }
 });
 
-// Logo link - scroll to top
 document.querySelector('.brand').addEventListener('click', (e) => {
   e.preventDefault();
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Contact page form submission with accessible validation
 const contactPageForm = document.getElementById('contactPageForm');
 const formStatus = document.getElementById('formStatus');
 const formStatusVisible = document.getElementById('formStatusVisible');
@@ -1034,7 +1072,6 @@ if (contactPageForm) {
 
     let firstErrorField = null;
 
-    // Reset previous error state
     fields.forEach(({ id }) => {
       const field = document.getElementById(id);
       const errorEl = document.getElementById('error-' + id);
@@ -1044,7 +1081,6 @@ if (contactPageForm) {
       if (errorEl) errorEl.textContent = '';
     });
 
-    // Validate required and email format
     fields.forEach(({ id, requiredMsg }) => {
       const field = document.getElementById(id);
       const errorEl = document.getElementById('error-' + id);
@@ -1060,7 +1096,7 @@ if (contactPageForm) {
         const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
         if (!emailPattern.test(value)) {
           if (errorEl) {
-            errorEl.textContent = 'Please enter a valid email address, such as [name@example.com](mailto:name@example.com).';
+            errorEl.textContent = 'Please enter a valid email address, such as name@example.com.';
           }
           field.classList.add('input-error');
           field.setAttribute('aria-invalid', 'true');
@@ -1111,7 +1147,6 @@ if (contactPageForm) {
   });
 }
 
-// Modal form submission with basic validation (keep simple but mark invalid)
 const modalForm = document.getElementById('contactForm');
 if (modalForm) {
   modalForm.addEventListener('submit', e => {
@@ -1152,7 +1187,6 @@ if (modalForm) {
   });
 }
 
-// Remove error class on input change for both forms
 document.querySelectorAll('input, textarea').forEach(field => {
   field.addEventListener('input', () => {
     field.classList.remove('input-error');
