@@ -680,7 +680,28 @@ width:60px;height:60px
 <div id="inventory-anchor" style="scroll-margin-top: 120px;"></div>
 <div id="inventory" class="inventory-list" aria-label="Vehicle inventory">
 
-<!-- Item 1: 2010 Ford F-150 Raptor -->
+<!-- Item 1: 2015 Audi S3 -->
+<article class="inventory-item fade-up" aria-labelledby="veh-2015-audi-s3-title">
+<figure class="vehicle-figure gallery-trigger" data-vehicle="audi-s3" tabindex="0" role="button" aria-label="Open gallery for 2015 Audi S3">
+<img loading="lazy" decoding="async" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1784528048/PXL_20260720_015713178_2_tdbmy9.jpg" alt="2015 Audi S3 exterior" width="560" height="420">
+</figure>
+<div class="vehicle-meta">
+<div class="kicker">2015 • Audi</div>
+<h2 class="vehicle-title" id="veh-2015-audi-s3-title">2015 Audi S3</h2>
+<p class="vehicle-copy">The 2015 Audi S3 is a compact sport sedan with turbocharged performance, Quattro all-wheel drive, sharp styling, and everyday comfort in a premium package.</p>
+<div class="specs" role="list">
+<div class="spec" role="listitem"><small>Model</small>S3</div>
+<div class="spec" role="listitem"><small>Transmission</small>Automatic</div>
+<div class="spec" role="listitem"><small>Mileage</small>122,300</div>
+<div class="spec" role="listitem"><small>Price</small>$11,995</div>
+</div>
+<div class="actions">
+<button class="btn" onclick="openModal('2015 Audi S3')">Request Info</button>
+</div>
+</div>
+</article>
+
+<!-- Item 2: 2010 Ford F-150 Raptor -->
 <article class="inventory-item fade-up" aria-labelledby="veh-2010-f150-raptor-title">
 <figure class="vehicle-figure vehicle-coming-soon">
 <img loading="lazy" decoding="async" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765603249/joey-chacon-wyVdoMqF184-unsplash_wdwkoo.jpg" alt="2010 Ford F-150 Raptor off-road" width="560" height="420">
@@ -693,24 +714,6 @@ width:60px;height:60px
 <div class="spec" role="listitem"><small>Model</small>F-150 Raptor</div>
 <div class="spec" role="listitem"><small>Transmission</small>Automatic</div>
 <div class="spec" role="listitem"><small>Mileage</small>144,000</div>
-<div class="spec" role="listitem"><small>Status</small>Coming Soon</div>
-</div>
-</div>
-</article>
-
-<!-- Item 2: 2015 Audi S3 Coming Soon -->
-<article class="inventory-item fade-up" aria-labelledby="veh-2015-audi-s3-title">
-<figure class="vehicle-figure vehicle-coming-soon">
-<img loading="lazy" decoding="async" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1767077641/lance-anderson-ywzVSyBdts0-unsplash_akwmya.jpg" alt="2015 Audi S3 parked in an urban setting" width="560" height="420">
-</figure>
-<div class="vehicle-meta">
-<div class="kicker">2015 • Audi</div>
-<h2 class="vehicle-title" id="veh-2015-audi-s3-title">2015 Audi S3</h2>
-<p class="vehicle-copy">Compact performance sedan with Quattro all-wheel drive and sharp, modern styling. This Audi S3 is coming soon to our curated inventory.</p>
-<div class="specs" role="list">
-<div class="spec" role="listitem"><small>Model</small>S3</div>
-<div class="spec" role="listitem"><small>Transmission</small>Automatic</div>
-<div class="spec" role="listitem"><small>Mileage</small>122,000</div>
 <div class="spec" role="listitem"><small>Status</small>Coming Soon</div>
 </div>
 </div>
@@ -835,6 +838,30 @@ and we will make every reasonable effort to assist you.
 <script>
 // Vehicle gallery data
 const vehicleGalleries = {
+  'audi-s3': [
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784528048/PXL_20260720_015713178_2_tdbmy9.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551527/PXL_20260720_015720744_2_zudjhs.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551527/PXL_20260720_015726760_2_rlvejr.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551527/PXL_20260720_015733245_2_ueh03h.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551527/PXL_20260720_015739161_2_ttunwb.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551528/PXL_20260720_015745033_2_qbvwid.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551527/PXL_20260720_015751512_2_jzuhoj.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551528/PXL_20260720_015810090_2_udplex.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551530/PXL_20260720_020417610_3_wozbw3.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551530/PXL_20260720_020350334_2_pwk9bs.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551529/PXL_20260720_020117131_2_haclbh.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551529/PXL_20260720_020121107_2_aobxqi.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551529/PXL_20260720_020129439_2_xwgqlc.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551528/PXL_20260720_020029157_2_slodav.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551529/PXL_20260720_020033734.MP_2_z09un4.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551530/PXL_20260720_020320375_2_tejb6b.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551528/PXL_20260720_020054504_2_wjo4gs.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551528/PXL_20260720_020108494_2_tm2tjv.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551531/PXL_20260720_020639133_iigucd.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551530/PXL_20260720_020644258.MP_mmi3wk.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551531/PXL_20260720_020624405_guhxmq.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551531/PXL_20260720_020630961_syjqqu.jpg'
+  ]
 };
 
 let currentGallery = [];
