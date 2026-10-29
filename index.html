@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Veritas Motor Group — Curated Used Cars</title>
 <meta name="description" content="Veritas Motor Group offers curated premium used cars — carefully selected, inspected, and presented with transparency.">
+
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W52BM4LHKE"></script>
 <script>
@@ -13,838 +14,823 @@
   gtag('js', new Date());
   gtag('config', 'G-W52BM4LHKE');
 </script>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765490703/kace-rodriguez-HX9fOoD9xN4-unsplash_f0bea6_riv5mt.jpg">
+
 <style>
 :root {
---bg:#ffffff;
---text:#0b0b0b;
---muted:#6b6b6b;
---accent:#000;
---maxWidth:1200px;
+  --bg:#ffffff;
+  --text:#0b0b0b;
+  --muted:#6b6b6b;
+  --accent:#000;
+  --maxWidth:1200px;
 }
-* {
-box-sizing:border-box
-}
-html {
-scroll-behavior:smooth;
-}
-html,body {
-height:100%;
-overflow-x:hidden;
-}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+html,body { height:100%; overflow-x:hidden; }
 body {
-margin:0;
-font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-background:var(--bg);
-color:var(--text);
--webkit-font-smoothing:antialiased;
--moz-osx-font-smoothing:grayscale;
-line-height:1.45;
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
 }
-
-/* Skip link */
 .skip-link {
-position:absolute;
-left:-999px;
-top:auto;
-width:1px;
-height:1px;
-overflow:hidden;
+  position:absolute;
+  left:-999px;
+  width:1px;
+  height:1px;
+  overflow:hidden;
 }
 .skip-link:focus {
-left:1rem;
-top:1rem;
-width:auto;
-height:auto;
-padding:0.5rem 0.75rem;
-background:#000;
-color:#fff;
-z-index:100;
-border-radius:4px;
+  left:1rem;
+  top:1rem;
+  width:auto;
+  height:auto;
+  padding:.5rem .75rem;
+  background:#000;
+  color:#fff;
+  z-index:100;
+  border-radius:4px;
 }
 
 /* Header */
 header {
-position:sticky;
-top:0;
-z-index:40;
-backdrop-filter: blur(6px);
-background:#ffffff;
-border-bottom:1px solid rgba(10,10,10,0.04);
-display:flex;
-align-items:center;
-justify-content:center;
-padding:0.3rem 1rem;
-height:98px;
+  position:sticky;
+  top:0;
+  z-index:40;
+  backdrop-filter:blur(6px);
+  background:#fff;
+  border-bottom:1px solid rgba(10,10,10,.04);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:.3rem 1rem;
+  height:98px;
 }
 .site-inner {
-max-width:var(--maxWidth);
-width:100%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:2rem;
-padding:0 1rem;
-margin:0 auto;
+  max-width:var(--maxWidth);
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:2rem;
+  padding:0 1rem;
+  margin:0 auto;
 }
 .brand {
-display:flex;
-align-items:center;
-gap:12px;
-text-decoration:none;
-color:var(--text);
-border:none;
-background:none;
-padding:0;
-min-width:0;
-flex-shrink:0;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:var(--text);
+  border:none;
+  background:none;
+  padding:0;
+  min-width:0;
+  flex-shrink:0;
 }
 .brand-logo {
-position:relative;
-height:78px;
-width:265px;
-overflow:hidden;
-display:flex;
-align-items:center;
+  position:relative;
+  height:78px;
+  width:265px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
 }
 .brand-logo img {
-position:absolute;
-top:0;
-left:0;
-height:100%;
-width:auto;
-display:block;
-clip-path: inset(0 3px 0 0);
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:auto;
+  display:block;
+  clip-path:inset(0 3px 0 0);
 }
-nav {
-display:flex;gap:1rem;align-items:center;flex-shrink:0;
-}
+nav { display:flex; gap:1rem; align-items:center; flex-shrink:0; }
 .nav-link {
-font-size:0.95rem;
-color:var(--muted);
-text-decoration:none;
-padding:8px 10px;
-border-radius:6px;
-white-space:nowrap;
-cursor:pointer;
-border:none;
-background:none;
-transition:color 0.2s ease, background 0.2s ease;
+  font-size:.95rem;
+  color:var(--muted);
+  text-decoration:none;
+  padding:8px 10px;
+  border-radius:6px;
+  white-space:nowrap;
+  cursor:pointer;
+  transition:color .2s ease,background .2s ease;
 }
-.nav-link:hover {
-color:var(--text);
-}
+.nav-link:hover { color:var(--text); }
 .nav-link:focus-visible {
-outline:2px solid var(--accent);
-outline-offset:2px;
-background:rgba(0,0,0,.05);
+  outline:2px solid var(--accent);
+  outline-offset:2px;
+  background:rgba(0,0,0,.05);
 }
 
 /* Hero */
 .hero {
-width:100%;
-min-height:64vh;
-display:grid;
-align-items:center;
-background:#000;
-color:#fff;
-position:relative;
+  width:100%;
+  min-height:64vh;
+  display:grid;
+  align-items:center;
+  background:#000;
+  color:#fff;
+  position:relative;
 }
-.hero-figure {
-position:absolute;
-inset:0;
-overflow:hidden;
-z-index:1;
-}
+.hero-figure { position:absolute; inset:0; overflow:hidden; z-index:1; }
 .hero-figure img {
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-decoding:async;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 .hero-figure::after {
-content:'';
-position:absolute;
-inset:0;
-background:linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.6) 100%);
-z-index:2;
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.4) 50%,rgba(0,0,0,.6) 100%);
+  z-index:2;
 }
 .hero-inner {
-max-width:var(--maxWidth);
-margin:0 auto;
-padding:8rem 1rem 6rem;
-display:grid;
-grid-template-columns:1fr;
-align-items:center;
-justify-items:center;  
-gap:2rem;
-position:relative;
-z-index:3;
-width:100%;
-text-align:center;
+  max-width:var(--maxWidth);
+  margin:0 auto;
+  padding:8rem 1rem 6rem;
+  display:grid;
+  grid-template-columns:1fr;
+  align-items:center;
+  justify-items:center;
+  gap:2rem;
+  position:relative;
+  z-index:3;
+  width:100%;
+  text-align:center;
 }
 .eyebrow {
-font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.95);font-size:0.9rem;text-shadow:0 2px 4px rgba(0,0,0,0.3);
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.95);
+  font-size:.9rem;
+  text-shadow:0 2px 4px rgba(0,0,0,.3);
 }
 .hero-title {
-font-size:3.4rem;line-height:1.02;margin:0;font-weight:700;letter-spacing:-0.02em;text-shadow:0 3px 8px rgba(0,0,0,0.4);
+  font-size:3.4rem;
+  line-height:1.02;
+  margin:0;
+  font-weight:700;
+  letter-spacing:-.02em;
+  text-shadow:0 3px 8px rgba(0,0,0,.4);
 }
 .hero-sub {
-font-size:1.05rem;color:rgba(255,255,255,0.95);max-width:54ch;margin:0.6rem auto 0;font-weight:300;text-shadow:0 2px 4px rgba(0,0,0,0.3);
+  font-size:1.05rem;
+  color:rgba(255,255,255,.95);
+  max-width:54ch;
+  margin:.6rem auto 0;
+  font-weight:300;
+  text-shadow:0 2px 4px rgba(0,0,0,.3);
 }
+
+/* Inventory */
 main {
-max-width:var(--maxWidth);margin:4rem auto;padding:0 1rem;width:100%;
+  max-width:var(--maxWidth);
+  margin:4rem auto;
+  padding:0 1rem;
+  width:100%;
 }
-.inventory-list {
-display:flex;flex-direction:column;gap:6rem
-}
+.inventory-list { display:flex; flex-direction:column; gap:6rem; }
 .inventory-item {
-display:grid;
-grid-template-columns:1fr 560px;
-gap:2.5rem;
-align-items:center;
-width:100%;
-contain:layout paint;
+  display:grid;
+  grid-template-columns:1fr 560px;
+  gap:2.5rem;
+  align-items:center;
+  width:100%;
+  contain:layout paint;
 }
-.inventory-item:nth-child(even) {
-grid-template-columns:560px 1fr;
-}
+.inventory-item:nth-child(even) { grid-template-columns:560px 1fr; }
 .vehicle-figure {
-height:420px;overflow:hidden;border-radius:6px;cursor:pointer;position:relative
+  height:420px;
+  overflow:hidden;
+  border-radius:6px;
+  position:relative;
 }
 .vehicle-figure img {
-width:100%;height:100%;object-fit:cover;display:block;
-transition:transform .7s cubic-bezier(.2,.9,.3,1);
-decoding:async;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .7s cubic-bezier(.2,.9,.3,1);
 }
-.vehicle-figure:hover img {
-transform:scale(1.02);
+.gallery-trigger { cursor:pointer; }
+.gallery-trigger:hover img { transform:scale(1.02); }
+.gallery-trigger:focus-visible {
+  outline:3px solid var(--accent);
+  outline-offset:3px;
 }
-.vehicle-meta {
-padding:0 0.5rem
+.photo-hint {
+  position:absolute;
+  bottom:1rem;
+  right:1rem;
+  padding:.5rem .75rem;
+  background:rgba(0,0,0,.72);
+  color:#fff;
+  border-radius:4px;
+  font-size:.85rem;
+  font-weight:600;
+  pointer-events:none;
 }
-.centered {
-text-align:center;
-margin-left:auto;
-margin-right:auto;
-}
+.vehicle-meta { padding:0 .5rem; }
 .kicker {
-font-weight:600;color:var(--muted);text-transform:uppercase;font-size:.85rem;letter-spacing:1px;margin-bottom:.6rem
+  font-weight:600;
+  color:var(--muted);
+  text-transform:uppercase;
+  font-size:.85rem;
+  letter-spacing:1px;
+  margin-bottom:.6rem;
 }
-.vehicle-title {
-font-size:1.6rem;margin:0 0 .75rem;font-weight:700
-}
-.vehicle-copy {
-color:var(--muted);max-width:56ch;margin-bottom:1.2rem
-}
+.vehicle-title { font-size:1.6rem; margin:0 0 .75rem; font-weight:700; }
+.vehicle-copy { color:var(--muted); max-width:56ch; margin-bottom:1.2rem; }
 .specs {
-display:grid;
-grid-template-columns:repeat(auto-fit, minmax(120px, 1fr));
-gap:1.6rem;
-margin-bottom:1.25rem;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:1.6rem;
+  margin-bottom:1.25rem;
 }
 .spec {
-display:flex;
-flex-direction:column;
-gap:0.25rem;
-font-weight:600;
-color:var(--text);
+  display:flex;
+  flex-direction:column;
+  gap:.25rem;
+  font-weight:600;
+  color:var(--text);
 }
 .spec small {
-font-weight:600;color:var(--muted);font-size:.78rem;margin-bottom:.25rem;text-transform:uppercase;letter-spacing:.8px
+  font-weight:600;
+  color:var(--muted);
+  font-size:.78rem;
+  margin-bottom:.25rem;
+  text-transform:uppercase;
+  letter-spacing:.8px;
 }
-.actions {
-display:flex;gap:1rem;align-items:center
-}
+.actions { display:flex; gap:1rem; align-items:center; }
 .btn {
-background:var(--accent);
-color:#fff;
-padding:.9rem 1.25rem;border-radius:6px;text-decoration:none;font-weight:700;font-size:.95rem;
-display:inline-flex;align-items:center;gap:.6rem;
-border:1px solid rgba(255,255,255,0.06);
-cursor:pointer;
-transition:background 0.2s ease;
+  background:var(--accent);
+  color:#fff;
+  padding:.9rem 1.25rem;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:.95rem;
+  display:inline-flex;
+  align-items:center;
+  gap:.6rem;
+  border:1px solid rgba(255,255,255,.06);
+  cursor:pointer;
+  transition:background .2s ease;
 }
-.btn:hover {
-background:#222;
-}
-.btn:focus-visible {
-outline:2px solid var(--accent);
-outline-offset:2px;
-}
+.btn:hover { background:#222; }
+.btn:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.btn:disabled { opacity:.6; cursor:wait; }
 .btn.secondary {
-background:transparent;color:var(--text);
-border:1px solid rgba(10,10,10,0.08);
-font-weight:600;
+  background:transparent;
+  color:var(--text);
+  border:1px solid rgba(10,10,10,.08);
+  font-weight:600;
 }
-.btn.secondary:hover {
-background:rgba(10,10,10,0.05);
-}
+.btn.secondary:hover { background:rgba(10,10,10,.05); }
 
-/* Contact Form Section */
+/* Contact form */
 .contact-section {
-margin-top:8rem;padding:4rem 1rem;background:rgba(10,10,10,0.02);border-radius:8px;
+  margin-top:8rem;
+  padding:4rem 1rem;
+  background:rgba(10,10,10,.02);
+  border-radius:8px;
 }
 .contact-section h2 {
-font-size:2rem;margin:0 0 1rem;font-weight:700;text-align:center;
+  font-size:2rem;
+  margin:0 0 1rem;
+  font-weight:700;
+  text-align:center;
 }
 .contact-section p {
-color:var(--muted);text-align:center;margin-bottom:2rem;max-width:56ch;margin-left:auto;margin-right:auto;
+  color:var(--muted);
+  text-align:center;
+  margin-bottom:2rem;
+  max-width:56ch;
+  margin-left:auto;
+  margin-right:auto;
 }
-.form-wrapper {
-max-width:600px;margin:0 auto;
-}
-.form-group {
-display:flex;flex-direction:column;margin-bottom:1.5rem;
-}
+.form-wrapper { max-width:600px; margin:0 auto; }
+.form-group { display:flex; flex-direction:column; margin-bottom:1.5rem; }
 .form-group label {
-font-size:.9rem;font-weight:600;margin-bottom:.5rem;color:var(--text);
+  font-size:.9rem;
+  font-weight:600;
+  margin-bottom:.5rem;
+  color:var(--text);
 }
-.form-group input,
-.form-group textarea {
-padding:.75rem;border:1px solid rgba(10,10,10,0.1);border-radius:6px;font-size:.95rem;font-family:inherit;
-transition:border-color 0.2s ease, box-shadow 0.2s ease;
+.form-group input,.form-group textarea {
+  padding:.75rem;
+  border:1px solid rgba(10,10,10,.1);
+  border-radius:6px;
+  font-size:.95rem;
+  font-family:inherit;
+  transition:border-color .2s ease,box-shadow .2s ease;
 }
-.form-group textarea {
-resize:vertical;min-height:120px;
+.form-group textarea { resize:vertical; min-height:120px; }
+.form-group input:focus,.form-group textarea:focus {
+  outline:none;
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(0,0,0,.05);
 }
-.form-group input:focus,
-.form-group textarea:focus {
-outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(0,0,0,0.05);
+.form-group input.input-error,.form-group textarea.input-error,
+.field input.input-error,.field textarea.input-error {
+  border-color:#d32f2f;
+  background:rgba(211,47,47,.04);
 }
-.form-group input.input-error,
-.form-group textarea.input-error {
-border-color:#d32f2f;
-background:rgba(211,47,47,0.04);
-}
-.form-group input.input-error:focus,
-.form-group textarea.input-error:focus {
-box-shadow:0 0 0 3px rgba(211,47,47,0.1);
-}
-.form-actions {
-display:flex;gap:1rem;justify-content:center;
-}
+.form-actions { display:flex; gap:1rem; justify-content:center; }
 .form-success {
-display:none;
-padding:1rem;
-background:#d4edda;
-color:#155724;
-border:1px solid #c3e6cb;
-border-radius:6px;
-margin-bottom:1.5rem;
-text-align:center;
-font-weight:600;
-animation:slideDown 0.3s ease;
+  display:none;
+  padding:1rem;
+  background:#d4edda;
+  color:#155724;
+  border:1px solid #c3e6cb;
+  border-radius:6px;
+  margin-bottom:1.5rem;
+  text-align:center;
+  font-weight:600;
 }
-.form-success.show {
-display:block;
+.form-success.show { display:block; }
+.hp-field { position:absolute; left:-9999px; opacity:0; pointer-events:none; }
+.form-error { color:#c62828; font-size:.85rem; min-height:1.1em; margin-top:.25rem; }
+.form-status,.visually-hidden {
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
 }
-/* Honeypot field - hidden from users */
-.hp-field {
-position:absolute;
-left:-9999px;
-opacity:0;
-pointer-events:none;
-}
-
-/* New: per-field error message styling */
-.form-error {
-color:#c62828;
-font-size:.85rem;
-min-height:1.1em;
-margin-top:0.25rem;
-}
-
-/* New: screen-reader-only status */
-.form-status {
-position:absolute;
-left:-999px;
-width:1px;
-height:1px;
-overflow:hidden;
-}
-
-/* New: visible status box */
 .form-status-visible {
-margin-top:0.5rem;
-padding:0.75rem 1rem;
-border-radius:6px;
-font-size:0.9rem;
+  margin-top:.5rem;
+  padding:.75rem 1rem;
+  border-radius:6px;
+  font-size:.9rem;
 }
-.form-status-visible.success {
-background:#d4edda;
-color:#155724;
-border:1px solid #c3e6cb;
-}
-.form-status-visible.error {
-background:#f8d7da;
-color:#721c24;
-border:1px solid #f5c6cb;
-}
+.form-status-visible.success { background:#d4edda; color:#155724; border:1px solid #c3e6cb; }
+.form-status-visible.error { background:#f8d7da; color:#721c24; border:1px solid #f5c6cb; }
 
-@keyframes slideDown {
-from {
-opacity:0;
-transform:translateY(-10px);
-}
-to {
-opacity:1;
-transform:translateY(0);
-}
-}
 footer {
-margin-top:6rem;padding:3.2rem 1rem;background:transparent;color:var(--muted);
-text-align:center;font-size:.95rem;
+  margin-top:6rem;
+  padding:3.2rem 1rem;
+  color:var(--muted);
+  text-align:center;
+  font-size:.95rem;
 }
-footer address {
-font-style:normal;
-}
-footer iframe {
-margin-top:1.5rem;
-width:100%;height:260px;border:0;border-radius:6px;
-}
-/* Responsive */
-@media (max-width:980px) {
-.inventory-item {
-grid-template-columns:1fr !important
-}
-.vehicle-figure {
-height:360px
-}
-.hero-inner {
-padding:6rem 1rem 4rem
-}
-.hero-title {
-font-size:2.4rem
-}
-}
-@media (max-width:768px) {
-header {
-height:84px;
-padding:0.28rem 1rem;
-}
-.brand-logo {
-height:67px;
-width:228px;
-}
-.hero {
-min-height:100dvh;
-}
-.hero-inner {
-padding:6rem 1rem 4rem;
-width:100%;
-}
-.contact-section {
-margin-top:6rem;padding:2.5rem 1rem;
-}
-.contact-section h2 {
-font-size:1.5rem;
-}
-.vehicle-meta,
-.vehicle-copy {
-text-align:center;
-margin-left:auto;
-margin-right:auto;
-}
-.specs {
-justify-content:center;
-}
-}
-@media (max-width:520px) {
-header {
-height:75px;
-padding:0.25rem 0.75rem;
-}
-.brand-logo {
-height:58px;
-width:197px;
-}
-.hero-title {
-font-size:1.8rem;
-text-shadow:0 2px 6px rgba(0,0,0,0.5);
-}
-.hero-sub {
-text-shadow:0 2px 4px rgba(0,0,0,0.4);
-}
-.eyebrow {
-text-shadow:0 1px 3px rgba(0,0,0,0.3);
-}
-.vehicle-figure {
-height:260px
-}
-main {
-margin-top:3rem
-}
-.form-actions {
-flex-direction:column;
-}
-.btn {
-width:100%;justify-content:center;
-}
-.nav-link {
-font-size:0.85rem;
-padding:6px 8px;
-}
-}
-/* Fade Up Animation */
+footer address { font-style:normal; }
+
+/* Fade-up */
 .fade-up {
-opacity:0;transform:translateY(30px);transition:opacity .8s, transform .8s cubic-bezier(.2,.9,.3,1)
+  opacity:0;
+  transform:translateY(30px);
+  transition:opacity .8s,transform .8s cubic-bezier(.2,.9,.3,1);
 }
-.fade-up.visible {
-opacity:1;transform:none
-}
-/* Modal */
+.fade-up.visible { opacity:1; transform:none; }
+
+/* Contact modal */
 .modal {
-position:fixed;inset:0;display:none;align-items:center;justify-content:center;
-background:rgba(8,8,8,0.5);z-index:60;
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:rgba(8,8,8,.5);
+  z-index:60;
 }
-.modal.open {
-display:flex
-}
+.modal.open { display:flex; }
 .modal-card {
-background:#fff;border-radius:10px;max-width:640px;width:94%;padding:1.25rem;
+  background:#fff;
+  border-radius:10px;
+  max-width:640px;
+  width:94%;
+  padding:1.25rem;
+  max-height:90dvh;
+  overflow-y:auto;
 }
 .modal-header {
-display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:.75rem;
 }
-.modal h3 {
-margin:0;font-size:1.25rem
-}
+.modal h3 { margin:0; font-size:1.25rem; }
 .modal-close {
-background:none;border:0;font-size:1.1rem;cursor:pointer;
-padding:4px 8px;
-transition:color 0.2s ease;
+  background:none;
+  border:0;
+  font-size:1.1rem;
+  cursor:pointer;
+  padding:4px 8px;
 }
-.modal-close:focus-visible {
-outline:2px solid var(--accent);
-border-radius:4px;
-}
-.field {
-display:flex;flex-direction:column;margin-bottom:.75rem
-}
-.field label {
-font-size:.85rem;margin-bottom:.35rem;color:var(--muted)
-}
+.modal-close:focus-visible { outline:2px solid var(--accent); border-radius:4px; }
+.field { display:flex; flex-direction:column; margin-bottom:.75rem; }
+.field label { font-size:.85rem; margin-bottom:.35rem; color:var(--muted); }
 .field input,.field textarea {
-padding:.6rem .7rem;border:1px solid rgba(10,10,10,0.08);
-border-radius:6px;font-size:1rem;
-transition:border-color 0.2s ease;
+  padding:.6rem .7rem;
+  border:1px solid rgba(10,10,10,.08);
+  border-radius:6px;
+  font-size:1rem;
+  font-family:inherit;
 }
-.field input:focus,
-.field textarea:focus {
-outline:none;
-border-color:var(--accent);
+.field input:focus,.field textarea:focus { outline:none; border-color:var(--accent); }
+.field input:focus-visible,.field textarea:focus-visible {
+  outline:2px solid var(--accent);
+  outline-offset:2px;
 }
-.field input:focus-visible,
-.field textarea:focus-visible {
-outline:2px solid var(--accent);
-outline-offset:2px;
-}
-.modal-actions {
-display:flex;gap:.5rem;justify-content:flex-end
-}
-.muted {
-font-size:.93rem;color:var(--muted)
-}
-/* Gallery Modal */
+.modal-actions { display:flex; gap:.5rem; justify-content:flex-end; }
+
+/* Gallery */
 .gallery-modal {
-position:fixed;inset:0;display:none;align-items:center;justify-content:center;
-background:rgba(8,8,8,0.95);z-index:70;
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:rgba(8,8,8,.95);
+  z-index:70;
 }
-.gallery-modal.open {
-display:flex
-}
+.gallery-modal.open { display:flex; }
 .gallery-container {
-position:relative;width:90%;max-width:900px;
-display:flex;flex-direction:column;gap:1rem;
+  position:relative;
+  width:90%;
+  max-width:900px;
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+  max-height:95dvh;
+  overflow-y:auto;
 }
 .gallery-main {
-position:relative;width:100%;padding-bottom:66.67%;
-overflow:hidden;border-radius:8px;background:#000;
+  position:relative;
+  width:100%;
+  padding-bottom:66.67%;
+  overflow:hidden;
+  border-radius:8px;
+  background:#000;
+  flex-shrink:0;
 }
 .gallery-main img {
-position:absolute;top:0;left:0;
-width:100%;height:100%;object-fit:contain;
-decoding:async;
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:contain;
 }
 .gallery-counter {
-position:absolute;top:1rem;right:1rem;
-background:rgba(0,0,0,0.7);color:#fff;
-padding:.5rem .75rem;border-radius:4px;font-size:.9rem;font-weight:600;
+  position:absolute;
+  top:1rem;
+  right:1rem;
+  background:rgba(0,0,0,.7);
+  color:#fff;
+  padding:.5rem .75rem;
+  border-radius:4px;
+  font-size:.9rem;
+  font-weight:600;
 }
-.gallery-controls {
-display:flex;gap:1rem;align-items:center;justify-content:center;
-}
+.gallery-controls { display:flex; gap:1rem; align-items:center; justify-content:center; }
 .gallery-btn {
-background:rgba(255,255,255,0.2);color:#fff;
-border:none;padding:.75rem 1.25rem;border-radius:6px;
-font-weight:600;cursor:pointer;font-size:.95rem;
-transition:background .3s;
+  background:rgba(255,255,255,.2);
+  color:#fff;
+  border:none;
+  padding:.75rem 1.25rem;
+  border-radius:6px;
+  font-weight:600;
+  cursor:pointer;
+  font-size:.95rem;
+  transition:background .3s;
 }
-.gallery-btn:hover:not(:disabled) {
-background:rgba(255,255,255,0.3)
-}
-.gallery-btn:focus-visible {
-outline:2px solid #fff;
-outline-offset:2px;
-}
-.gallery-btn:disabled {
-opacity:.5;cursor:not-allowed
-}
+.gallery-btn:hover:not(:disabled) { background:rgba(255,255,255,.3); }
+.gallery-btn:focus-visible { outline:2px solid #fff; outline-offset:2px; }
+.gallery-btn:disabled { opacity:.5; cursor:not-allowed; }
 .gallery-close-btn {
-position:absolute;top:1rem;left:1rem;
-background:rgba(0,0,0,0.7);color:#fff;
-border:none;padding:.5rem .75rem;border-radius:4px;
-font-size:1.2rem;cursor:pointer;
-transition:background .3s;
+  position:absolute;
+  top:1rem;
+  left:1rem;
+  z-index:2;
+  background:rgba(0,0,0,.7);
+  color:#fff;
+  border:none;
+  padding:.5rem .75rem;
+  border-radius:4px;
+  font-size:1.2rem;
+  cursor:pointer;
 }
-.gallery-close-btn:hover {
-background:rgba(0,0,0,0.9)
-}
-.gallery-close-btn:focus-visible {
-outline:2px solid #fff;
-outline-offset:2px;
-}
+.gallery-close-btn:hover { background:rgba(0,0,0,.9); }
+.gallery-close-btn:focus-visible { outline:2px solid #fff; outline-offset:2px; }
 .gallery-thumbnails {
-display:flex;gap:.75rem;overflow-x:auto;padding:.5rem;
-background:rgba(0,0,0,0.4);border-radius:6px;
+  display:flex;
+  gap:.75rem;
+  overflow-x:auto;
+  padding:.5rem;
+  background:rgba(0,0,0,.4);
+  border-radius:6px;
+  flex-shrink:0;
 }
 .gallery-thumb {
-width:80px;height:80px;flex-shrink:0;
-border:2px solid transparent;border-radius:4px;overflow:hidden;
-cursor:pointer;transition:all .3s;
-background:none;
-padding:0;
+  width:80px;
+  height:80px;
+  flex-shrink:0;
+  border:2px solid transparent;
+  border-radius:4px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:opacity .3s,border-color .3s;
+  background:none;
+  padding:0;
 }
-.gallery-thumb img {
-width:100%;height:100%;object-fit:cover;display:block;
-decoding:async;
-}
-.gallery-thumb.active {
-border-color:#fff;
-transform:scale(1.05);
-}
-.gallery-thumb:hover {
-opacity:.8
-}
-.gallery-thumb:focus-visible {
-outline:2px solid #fff;
-outline-offset:2px;
+.gallery-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+.gallery-thumb.active { border-color:#fff; }
+.gallery-thumb:hover { opacity:.8; }
+.gallery-thumb:focus-visible { outline:2px solid #fff; outline-offset:2px; }
+
+/* Responsive */
+@media (max-width:980px) {
+  .inventory-item { grid-template-columns:1fr !important; }
+  .vehicle-figure { height:360px; }
+  .hero-inner { padding:6rem 1rem 4rem; }
+  .hero-title { font-size:2.4rem; }
 }
 @media (max-width:768px) {
-.gallery-container {
-width:95%;max-width:100%
+  header { height:84px; padding:.28rem 1rem; }
+  .brand-logo { height:67px; width:228px; }
+  .hero { min-height:100dvh; }
+  .hero-inner { padding:6rem 1rem 4rem; width:100%; }
+  .contact-section { margin-top:6rem; padding:2.5rem 1rem; }
+  .contact-section h2 { font-size:1.5rem; }
+  .vehicle-meta,.vehicle-copy { text-align:center; margin-left:auto; margin-right:auto; }
+  .specs,.actions { justify-content:center; }
+  .gallery-container { width:95%; max-width:100%; }
+  .gallery-thumbnails { gap:.5rem; }
+  .gallery-thumb { width:60px; height:60px; }
 }
-.gallery-thumbnails {
-gap:.5rem
+@media (max-width:520px) {
+  header { height:75px; padding:.25rem .75rem; }
+  .site-inner { gap:.5rem; padding:0; }
+  nav { gap:.25rem; }
+  .brand-logo { height:58px; width:197px; }
+  .hero-title { font-size:1.8rem; text-shadow:0 2px 6px rgba(0,0,0,.5); }
+  .hero-sub { text-shadow:0 2px 4px rgba(0,0,0,.4); }
+  .eyebrow { text-shadow:0 1px 3px rgba(0,0,0,.3); }
+  .vehicle-figure { height:260px; margin-left:0; margin-right:0; }
+  main { margin-top:3rem; }
+  .form-actions { flex-direction:column; }
+  .btn { width:100%; justify-content:center; }
+  .nav-link { font-size:.85rem; padding:6px 8px; }
 }
-.gallery-thumb {
-width:60px;height:60px
-}
+@media (prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  *,*::before,*::after {
+    animation-duration:.01ms !important;
+    transition-duration:.01ms !important;
+  }
+  .fade-up { opacity:1; transform:none; }
 }
 </style>
 </head>
+
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <header>
-<div class="site-inner">
-<a href="#" class="brand" aria-label="Veritas Motor Group - Home">
-<div class="brand-logo">
-<img src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765567703/ChatGPT_Image_Dec_12_2025_11_28_07_AM_ywnvbz.jpg" alt="Veritas Motor Group logo" width="265" height="78" decoding="async">
-</div>
-</a>
-<nav aria-label="Primary navigation">
-<a href="#inventory-anchor" class="nav-link">Inventory</a>
-<a href="#contact-anchor" class="nav-link">Contact</a>
-</nav>
-</div>
+  <div class="site-inner">
+    <a href="#" class="brand" aria-label="Veritas Motor Group - Home">
+      <div class="brand-logo">
+        <img src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765567703/ChatGPT_Image_Dec_12_2025_11_28_07_AM_ywnvbz.jpg" alt="Veritas Motor Group logo" width="265" height="78" decoding="async">
+      </div>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#inventory-anchor" class="nav-link">Inventory</a>
+      <a href="#contact-anchor" class="nav-link">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <section class="hero" aria-labelledby="hero-heading">
-<div class="hero-figure" aria-hidden="true">
-<img src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765490703/kace-rodriguez-HX9fOoD9xN4-unsplash_f0bea6_riv5mt.jpg" alt="" role="presentation" width="1600" height="900" decoding="async">
-</div>
-<div class="hero-inner">
-<div class="fade-up">
-<div class="eyebrow">Curated | Premium</div>
-<h1 id="hero-heading" class="hero-title">Drive Something Special</h1>
-<p class="hero-sub">Hand-selected. Inspected thoroughly. Priced fairly. Sold with integrity.</p>
-</div>
-</div>
+  <div class="hero-figure" aria-hidden="true">
+    <img src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765490703/kace-rodriguez-HX9fOoD9xN4-unsplash_f0bea6_riv5mt.jpg" alt="" role="presentation" width="1600" height="900" decoding="async">
+  </div>
+  <div class="hero-inner">
+    <div class="fade-up">
+      <div class="eyebrow">Curated | Premium</div>
+      <h1 id="hero-heading" class="hero-title">Drive Something Special</h1>
+      <p class="hero-sub">Hand-selected. Inspected thoroughly. Priced fairly. Sold with integrity.</p>
+    </div>
+  </div>
 </section>
 
 <main id="main-content">
-<div id="inventory-anchor" style="scroll-margin-top: 120px;"></div>
-<div id="inventory" class="inventory-list" aria-label="Vehicle inventory">
+  <div id="inventory-anchor" style="scroll-margin-top:120px;"></div>
+  <div id="inventory" class="inventory-list" aria-label="Vehicle inventory">
 
-<!-- Item 2: 2010 Ford F-150 Raptor -->
-<article class="inventory-item fade-up" aria-labelledby="veh-2010-f150-raptor-title">
-<figure class="vehicle-figure vehicle-coming-soon">
-<img loading="lazy" decoding="async" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765603249/joey-chacon-wyVdoMqF184-unsplash_wdwkoo.jpg" alt="2010 Ford F-150 Raptor off-road" width="560" height="420">
-</figure>
-<div class="vehicle-meta">
-<div class="kicker">2010 • Ford</div>
-<h2 class="vehicle-title" id="veh-2010-f150-raptor-title">2010 Ford F-150 Raptor</h2>
-<p class="vehicle-copy">High-performance off-road pickup that blends rugged capability with everyday usability. This F-150 Raptor will be available in our inventory soon.</p>
-<div class="specs" role="list">
-<div class="spec" role="listitem"><small>Model</small>F-150 Raptor</div>
-<div class="spec" role="listitem"><small>Transmission</small>Automatic</div>
-<div class="spec" role="listitem"><small>Mileage</small>144,000</div>
-<div class="spec" role="listitem"><small>Status</small>Coming Soon</div>
-</div>
-</div>
-</article>
+    <!-- Item 1: 2011 BMW X3 xDrive35i -->
+    <article class="inventory-item fade-up" aria-labelledby="veh-2011-bmw-x3-title">
+      <figure class="vehicle-figure gallery-trigger"
+        data-vehicle="bmw-x3"
+        tabindex="0"
+        role="button"
+        aria-haspopup="dialog"
+        aria-label="View all 21 photos of the 2011 BMW X3 xDrive35i">
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292631/PXL_20261028_010257671_3_kmrvdi.jpg"
+          alt="2011 BMW X3 xDrive35i"
+          width="560"
+          height="420">
+        <span class="photo-hint" aria-hidden="true">View 21 Photos</span>
+      </figure>
 
-</div>
+      <div class="vehicle-meta">
+        <div class="kicker">2011 • BMW</div>
+        <h2 class="vehicle-title" id="veh-2011-bmw-x3-title">2011 BMW X3 xDrive35i</h2>
+        <p class="vehicle-copy">The 2011 BMW X3 xDrive35i blends turbocharged inline-six performance with xDrive all-wheel drive and everyday SUV versatility. A refined cabin and responsive handling make it a compelling choice for commuting and weekend getaways.</p>
+        <div class="specs" role="list">
+          <div class="spec" role="listitem"><small>Model</small>X3 xDrive35i</div>
+          <div class="spec" role="listitem"><small>Transmission</small>Automatic</div>
+          <div class="spec" role="listitem"><small>Mileage</small>149,300</div>
+          <div class="spec" role="listitem"><small>Price</small>$6,995</div>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn" onclick="openModal('I am interested in the 2011 BMW X3 xDrive35i listed at $6,995. Please contact me with more information.')">Request Info</button>
+        </div>
+      </div>
+    </article>
 
-<!-- Contact Form Section -->
-<section class="contact-section fade-up" id="contact-anchor" style="scroll-margin-top: 120px;">
-<h2>Get in Touch</h2>
-<p>Interested in a vehicle or have questions? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.</p>
-<div class="form-wrapper">
+    <!-- Item 2: 2010 Ford F-150 Raptor -->
+    <article class="inventory-item fade-up" aria-labelledby="veh-2010-f150-raptor-title">
+      <figure class="vehicle-figure vehicle-coming-soon">
+        <img loading="lazy" decoding="async" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765603249/joey-chacon-wyVdoMqF184-unsplash_wdwkoo.jpg" alt="2010 Ford F-150 Raptor off-road" width="560" height="420">
+      </figure>
+      <div class="vehicle-meta">
+        <div class="kicker">2010 • Ford</div>
+        <h2 class="vehicle-title" id="veh-2010-f150-raptor-title">2010 Ford F-150 Raptor</h2>
+        <p class="vehicle-copy">High-performance off-road pickup that blends rugged capability with everyday usability. This F-150 Raptor will be available in our inventory soon.</p>
+        <div class="specs" role="list">
+          <div class="spec" role="listitem"><small>Model</small>F-150 Raptor</div>
+          <div class="spec" role="listitem"><small>Transmission</small>Automatic</div>
+          <div class="spec" role="listitem"><small>Mileage</small>144,000</div>
+          <div class="spec" role="listitem"><small>Status</small>Coming Soon</div>
+        </div>
+      </div>
+    </article>
+  </div>
 
-<!-- Screen reader-only global status -->
-<div id="formStatus" class="form-status" aria-live="polite" aria-atomic="true"></div>
-<!-- Visible status box -->
-<div id="formStatusVisible" class="form-status-visible" aria-hidden="true"></div>
+  <!-- Contact form -->
+  <section class="contact-section fade-up" id="contact-anchor" style="scroll-margin-top:120px;">
+    <h2>Get in Touch</h2>
+    <p>Interested in a vehicle or have questions? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.</p>
+    <div class="form-wrapper">
+      <div id="formStatus" class="form-status" aria-live="polite" aria-atomic="true"></div>
+      <div id="formStatusVisible" class="form-status-visible" aria-hidden="true"></div>
+      <div class="form-success" id="contactSuccess" role="status" aria-live="polite">✓ Message sent successfully! We'll get back to you soon.</div>
 
-<div class="form-success" id="contactSuccess" role="status" aria-live="polite">✓ Message sent successfully! We'll get back to you soon.</div>
-<form id="contactPageForm" action="https://usebasin.com/f/c6b5ba9a258f" method="POST" novalidate>
-<div class="form-group">
-<label for="contact-name">Name</label>
-<input type="text" id="contact-name" name="name" placeholder="John Doe" required aria-required="true">
-<div class="form-error" id="error-contact-name"></div>
-</div>
-<div class="form-group">
-<label for="contact-email">Email</label>
-<input type="email" id="contact-email" name="email" placeholder="john@example.com" required aria-required="true">
-<div class="form-error" id="error-contact-email"></div>
-</div>
-<div class="form-group">
-<label for="contact-phone">Phone (optional)</label>
-<input type="tel" id="contact-phone" name="phone" placeholder="(408) 555-1234">
-</div>
-<div class="form-group">
-<label for="contact-message">Message</label>
-<textarea id="contact-message" name="message" placeholder="Tell us which vehicle you're interested in or any questions you have..." required aria-required="true"></textarea>
-<div class="form-error" id="error-contact-message"></div>
-</div>
-<!-- Honeypot field for spam protection -->
-<div class="hp-field">
-<label for="contact-website">Website</label>
-<input type="text" id="contact-website" name="_gotcha" autocomplete="off">
-</div>
-<div class="form-actions">
-<button type="submit" class="btn">Send Message</button>
-<button type="reset" class="btn secondary">Clear</button>
-</div>
-</form>
-</div>
-</section>
-
+      <form id="contactPageForm" action="https://usebasin.com/f/c6b5ba9a258f" method="POST" novalidate>
+        <div class="form-group">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" name="name" placeholder="John Doe" required aria-required="true">
+          <div class="form-error" id="error-contact-name"></div>
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" name="email" placeholder="john@example.com" required aria-required="true">
+          <div class="form-error" id="error-contact-email"></div>
+        </div>
+        <div class="form-group">
+          <label for="contact-phone">Phone (optional)</label>
+          <input type="tel" id="contact-phone" name="phone" placeholder="(408) 555-1234">
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" placeholder="Tell us which vehicle you're interested in or any questions you have..." required aria-required="true"></textarea>
+          <div class="form-error" id="error-contact-message"></div>
+        </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="contact-website">Website</label>
+          <input type="text" id="contact-website" name="_gotcha" autocomplete="off" tabindex="-1">
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn">Send Message</button>
+          <button type="reset" class="btn secondary">Clear</button>
+        </div>
+      </form>
+    </div>
+  </section>
 </main>
 
 <footer>
-<address>1289 Reamwood Ave Suite C, Sunnyvale, CA 94089</address>
-<p><a href="tel:+14082137456">(408) 213-7456</a></p>
-<p>&copy; 2025 Veritas Motor Group — Serving the community with integrity.</p>
-<section aria-labelledby="accessibility-heading">
-<h2 id="accessibility-heading" style="margin: 1rem 0 0;">Accessibility Statement</h2>
-<p style="max-width: 56ch; margin: 0.5rem auto 0;">
-Veritas Motor Group is committed to ensuring digital accessibility for all users.
-If you experience difficulty accessing any content on this site, please contact us at
-<a href="mailto:veritasmotorgroup@gmail.com">veritasmotorgroup@gmail.com</a>,
-and we will make every reasonable effort to assist you.
-</p>
-</section>
+  <address>1289 Reamwood Ave Suite C, Sunnyvale, CA 94089</address>
+  <p><a href="tel:+14082137456">(408) 213-7456</a></p>
+  <p>&copy; 2025 Veritas Motor Group — Serving the community with integrity.</p>
+  <section aria-labelledby="accessibility-heading">
+    <h2 id="accessibility-heading" style="margin:1rem 0 0;">Accessibility Statement</h2>
+    <p style="max-width:56ch;margin:.5rem auto 0;">
+      Veritas Motor Group is committed to ensuring digital accessibility for all users.
+      If you experience difficulty accessing any content on this site, please contact us at
+      <a href="mailto:veritasmotorgroup@gmail.com">veritasmotorgroup@gmail.com</a>,
+      and we will make every reasonable effort to assist you.
+    </p>
+  </section>
 </footer>
 
-<!-- Contact Modal -->
+<!-- Contact modal -->
 <div class="modal" id="modalContact" aria-hidden="true">
-<div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-contact-heading" tabindex="-1">
-<div class="modal-header">
-<h3 id="modal-contact-heading">Contact us about a vehicle</h3>
-<button class="modal-close" aria-label="Close dialog">✕</button>
-</div>
-<form id="contactForm" action="https://usebasin.com/f/c6b5ba9a258f" method="POST" novalidate>
-<div class="field">
-<label for="modal-name">Your name</label>
-<input id="modal-name" name="name" type="text" placeholder="Jane Buyer" required aria-required="true">
-</div>
-<div class="field">
-<label for="modal-email">Email</label>
-<input id="modal-email" name="email" type="email" placeholder="you@email.com" required aria-required="true">
-</div>
-<div class="field">
-<label for="modal-message">Message</label>
-<textarea id="modal-message" name="message" rows="4" placeholder="Interested in the vehicle" required aria-required="true"></textarea>
-</div>
-<!-- Honeypot field for spam protection -->
-<div class="hp-field">
-<label for="modal-website">Website</label>
-<input type="text" id="modal-website" name="_gotcha" autocomplete="off">
-</div>
-<div class="modal-actions">
-<button type="button" class="btn secondary modal-cancel">Cancel</button>
-<button type="submit" class="btn">Send</button>
-</div>
-</form>
-</div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-contact-heading" tabindex="-1">
+    <div class="modal-header">
+      <h3 id="modal-contact-heading">Contact us about a vehicle</h3>
+      <button type="button" class="modal-close" aria-label="Close dialog">✕</button>
+    </div>
+    <form id="contactForm" action="https://usebasin.com/f/c6b5ba9a258f" method="POST" novalidate>
+      <div class="field">
+        <label for="modal-name">Your name</label>
+        <input id="modal-name" name="name" type="text" placeholder="Jane Buyer" required aria-required="true">
+      </div>
+      <div class="field">
+        <label for="modal-email">Email</label>
+        <input id="modal-email" name="email" type="email" placeholder="you@email.com" required aria-required="true">
+      </div>
+      <div class="field">
+        <label for="modal-message">Message</label>
+        <textarea id="modal-message" name="message" rows="4" placeholder="Interested in the vehicle" required aria-required="true"></textarea>
+      </div>
+      <div class="hp-field" aria-hidden="true">
+        <label for="modal-website">Website</label>
+        <input type="text" id="modal-website" name="_gotcha" autocomplete="off" tabindex="-1">
+      </div>
+      <div id="modalFormStatus" class="form-error" role="status" aria-live="polite"></div>
+      <div class="modal-actions">
+        <button type="button" class="btn secondary modal-cancel">Cancel</button>
+        <button type="submit" class="btn">Send</button>
+      </div>
+    </form>
+  </div>
 </div>
 
-<!-- Gallery Modal -->
+<!-- Gallery modal -->
 <div class="gallery-modal" id="galleryModal" aria-hidden="true">
-<div class="gallery-container" role="dialog" aria-modal="true" aria-labelledby="gallery-heading">
-<button class="gallery-close-btn" aria-label="Close gallery">✕</button>
-<h2 id="gallery-heading" class="visually-hidden">Vehicle image gallery</h2>
-<div class="gallery-main">
-<img id="galleryMainImage" src="" alt="Selected vehicle image" decoding="async">
-<div class="gallery-counter" aria-live="polite" aria-atomic="true">
-<span id="galleryCounter">1</span> / <span id="galleryTotal">0</span>
-</div>
-</div>
-<div class="gallery-controls">
-<button class="gallery-btn" id="galleryPrev" aria-label="Previous image">← Previous</button>
-<button class="gallery-btn" id="galleryNext" aria-label="Next image">Next →</button>
-</div>
-<div class="gallery-thumbnails" id="galleryThumbnails" aria-label="Thumbnail images"></div>
-</div>
+  <div class="gallery-container" role="dialog" aria-modal="true" aria-labelledby="gallery-heading">
+    <button type="button" class="gallery-close-btn" aria-label="Close gallery">✕</button>
+    <h2 id="gallery-heading" class="visually-hidden">Vehicle image gallery</h2>
+    <div class="gallery-main">
+      <img id="galleryMainImage" alt="Selected vehicle image" decoding="async">
+      <div class="gallery-counter" aria-live="polite" aria-atomic="true">
+        <span id="galleryCounter">1</span> / <span id="galleryTotal">21</span>
+      </div>
+    </div>
+    <div class="gallery-controls">
+      <button type="button" class="gallery-btn" id="galleryPrev" aria-label="Previous image">← Previous</button>
+      <button type="button" class="gallery-btn" id="galleryNext" aria-label="Next image">Next →</button>
+    </div>
+    <div class="gallery-thumbnails" id="galleryThumbnails" aria-label="Thumbnail images"></div>
+  </div>
 </div>
 
 <script>
-// Vehicle gallery data
+// BMW photos in the exact order provided.
 const vehicleGalleries = {
-  'audi-s3': [
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784528048/PXL_20260720_015713178_2_tdbmy9.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551527/PXL_20260720_015720744_2_zudjhs.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551527/PXL_20260720_015726760_2_rlvejr.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551527/PXL_20260720_015733245_2_ueh03h.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551527/PXL_20260720_015739161_2_ttunwb.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551528/PXL_20260720_015745033_2_qbvwid.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551527/PXL_20260720_015751512_2_jzuhoj.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551528/PXL_20260720_015810090_2_udplex.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551530/PXL_20260720_020417610_3_wozbw3.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551530/PXL_20260720_020350334_2_pwk9bs.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551529/PXL_20260720_020117131_2_haclbh.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551529/PXL_20260720_020121107_2_aobxqi.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551529/PXL_20260720_020129439_2_xwgqlc.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551528/PXL_20260720_020029157_2_slodav.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551529/PXL_20260720_020033734.MP_2_z09un4.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551530/PXL_20260720_020320375_2_tejb6b.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551528/PXL_20260720_020054504_2_wjo4gs.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551528/PXL_20260720_020108494_2_tm2tjv.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551531/PXL_20260720_020639133_iigucd.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551530/PXL_20260720_020644258.MP_mmi3wk.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551531/PXL_20260720_020624405_guhxmq.jpg',
-    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1784551531/PXL_20260720_020630961_syjqqu.jpg'
+  'bmw-x3': [
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292631/PXL_20261028_010257671_3_kmrvdi.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292632/PXL_20261028_010304974_2_gnxmof.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292632/PXL_20261028_010352744_xrfjmt.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292632/PXL_20261028_010406690_r1bocq.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292632/PXL_20261028_010401429_mymzut.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292633/PXL_20261028_010414178_a2d6mb.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292633/PXL_20261028_010423848_bnrftl.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292634/PXL_20261028_010431571.MP_zkgojw.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292634/PXL_20261028_010848236_2_ow3wyc.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292634/PXL_20261028_010858384_2_yrujpl.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292635/PXL_20261028_010911630_2_yckkvm.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292635/PXL_20261028_010920339_2_tlf2wi.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292636/PXL_20261028_010932877_2_vakwvg.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292636/PXL_20261028_010744853_2_vwbkyr.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292637/PXL_20261028_010820480_2_dzrsya.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292638/PXL_20261028_010755468_2_vattpm.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292638/PXL_20261028_010813193_2_ozpwuf.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292638/PXL_20261028_010946066_2_xvrblp.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292638/PXL_20261028_010940035_2_oovo3d.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292639/PXL_20261028_011001040_2_mlnvqz.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292639/PXL_20261028_010954773_2_afdcje.jpg'
   ]
+};
+
+const vehicleNames = {
+  'bmw-x3':'2011 BMW X3 xDrive35i'
 };
 
 let currentGallery = [];
 let currentImageIndex = 0;
+let currentVehicleName = '';
+let lastGalleryFocusedElement = null;
+
 const galleryModal = document.getElementById('galleryModal');
 const galleryMainImage = document.getElementById('galleryMainImage');
 const galleryCounter = document.getElementById('galleryCounter');
@@ -853,312 +839,348 @@ const galleryPrev = document.getElementById('galleryPrev');
 const galleryNext = document.getElementById('galleryNext');
 const galleryThumbnails = document.getElementById('galleryThumbnails');
 const galleryCloseBtn = document.querySelector('.gallery-close-btn');
-let lastGalleryFocusedElement = null;
 
 function initGallery(vehicleId) {
   currentGallery = vehicleGalleries[vehicleId] || [];
+  if (!currentGallery.length) return;
+
   currentImageIndex = 0;
-  if (currentGallery.length === 0) return;
+  currentVehicleName = vehicleNames[vehicleId] || 'Vehicle';
+  document.getElementById('gallery-heading').textContent = currentVehicleName + ' image gallery';
   galleryTotal.textContent = currentGallery.length;
   galleryThumbnails.innerHTML = '';
-  currentGallery.forEach((img, idx) => {
+
+  currentGallery.forEach((url,index) => {
     const thumb = document.createElement('button');
-    thumb.className = 'gallery-thumb' + (idx === 0 ? ' active' : '');
-    thumb.setAttribute('aria-label', `View image ${idx + 1} of ${currentGallery.length}`);
-    thumb.innerHTML = `<img src="${img}" alt="Thumbnail ${idx + 1}" decoding="async">`;
-    thumb.addEventListener('click', () => goToImage(idx));
+    thumb.type = 'button';
+    thumb.className = 'gallery-thumb';
+    thumb.setAttribute('aria-label', `View photo ${index + 1} of ${currentGallery.length}`);
+
+    const image = document.createElement('img');
+    image.src = url;
+    image.alt = `${currentVehicleName} thumbnail ${index + 1}`;
+    image.decoding = 'async';
+    image.loading = 'lazy';
+    image.width = 80;
+    image.height = 80;
+    thumb.appendChild(image);
+
+    thumb.addEventListener('click', () => goToImage(index));
     galleryThumbnails.appendChild(thumb);
   });
+
   lastGalleryFocusedElement = document.activeElement;
   updateGalleryDisplay();
   galleryModal.classList.add('open');
-  galleryModal.setAttribute('aria-hidden', 'false');
+  galleryModal.setAttribute('aria-hidden','false');
   document.body.style.overflow = 'hidden';
+  galleryThumbnails.scrollLeft = 0;
   galleryCloseBtn.focus();
 }
 
 function updateGalleryDisplay() {
   galleryMainImage.src = currentGallery[currentImageIndex];
+  galleryMainImage.alt = `${currentVehicleName} — photo ${currentImageIndex + 1} of ${currentGallery.length}`;
   galleryCounter.textContent = currentImageIndex + 1;
-  document.querySelectorAll('.gallery-thumb').forEach((thumb, idx) => {
-    thumb.classList.toggle('active', idx === currentImageIndex);
+
+  galleryThumbnails.querySelectorAll('.gallery-thumb').forEach((thumb,index) => {
+    const active = index === currentImageIndex;
+    thumb.classList.toggle('active',active);
+    thumb.setAttribute('aria-pressed',String(active));
   });
+
   galleryPrev.disabled = currentImageIndex === 0;
   galleryNext.disabled = currentImageIndex === currentGallery.length - 1;
 }
 
 function goToImage(index) {
-  if (index >= 0 && index < currentGallery.length) {
-    currentImageIndex = index;
-    updateGalleryDisplay();
+  if (index < 0 || index >= currentGallery.length) return;
+  currentImageIndex = index;
+  updateGalleryDisplay();
+
+  const activeThumb = galleryThumbnails.children[index];
+  if (activeThumb) {
+    galleryThumbnails.scrollLeft =
+      activeThumb.offsetLeft -
+      galleryThumbnails.offsetLeft -
+      galleryThumbnails.clientWidth / 2 +
+      activeThumb.clientWidth / 2;
   }
 }
 
 function closeGallery() {
   galleryModal.classList.remove('open');
-  galleryModal.setAttribute('aria-hidden', 'true');
+  galleryModal.setAttribute('aria-hidden','true');
   document.body.style.overflow = '';
   if (lastGalleryFocusedElement) lastGalleryFocusedElement.focus();
 }
 
-// Event delegation for gallery triggers (mouse + keyboard)
-document.addEventListener('click', e => {
-  const trigger = e.target.closest('.gallery-trigger');
+document.addEventListener('click',event => {
+  const trigger = event.target.closest('.gallery-trigger');
   if (trigger) {
-    const vehicleId = trigger.dataset.vehicle;
-    initGallery(vehicleId);
+    trigger.focus();
+    initGallery(trigger.dataset.vehicle);
   }
 });
 
-document.addEventListener('keydown', e => {
-  const trigger = e.target.closest && e.target.closest('.gallery-trigger');
-  if (trigger && (e.key === 'Enter' || e.key === ' ')) {
-    e.preventDefault();
-    const vehicleId = trigger.dataset.vehicle;
-    initGallery(vehicleId);
+document.addEventListener('keydown',event => {
+  const trigger = event.target.closest && event.target.closest('.gallery-trigger');
+  if (trigger && (event.key === 'Enter' || event.key === ' ')) {
+    event.preventDefault();
+    initGallery(trigger.dataset.vehicle);
   }
 });
 
-galleryPrev.addEventListener('click', () => {
-  if (currentImageIndex > 0) goToImage(currentImageIndex - 1);
-});
-galleryNext.addEventListener('click', () => {
-  if (currentImageIndex < currentGallery.length - 1) goToImage(currentImageIndex + 1);
-});
-galleryCloseBtn.addEventListener('click', closeGallery);
-galleryModal.addEventListener('click', e => {
-  if (e.target === galleryModal) closeGallery();
+galleryPrev.addEventListener('click',() => goToImage(currentImageIndex - 1));
+galleryNext.addEventListener('click',() => goToImage(currentImageIndex + 1));
+galleryCloseBtn.addEventListener('click',closeGallery);
+galleryModal.addEventListener('click',event => {
+  if (event.target === galleryModal) closeGallery();
 });
 
-document.addEventListener('keydown', e => {
-  if (galleryModal.classList.contains('open')) {
-    if (e.key === 'ArrowLeft') galleryPrev.click();
-    if (e.key === 'ArrowRight') galleryNext.click();
-    if (e.key === 'Escape') closeGallery();
-    if (e.key === 'Tab') {
-      const focusable = galleryModal.querySelectorAll('button, [href], input, textarea, [tabindex]:not([tabindex="-1"])');
-      const focusArray = Array.prototype.slice.call(focusable);
-      const first = focusArray[0];
-      const last = focusArray[focusArray.length - 1];
-      if (e.shiftKey && document.activeElement === first) {
-        e.preventDefault();
-        last.focus();
-      } else if (!e.shiftKey && document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
+function trapFocus(event,container) {
+  const focusable = Array.from(container.querySelectorAll(
+    'button:not(:disabled),[href],input:not(:disabled),textarea:not(:disabled),[tabindex]:not([tabindex="-1"])'
+  )).filter(element => element.getClientRects().length > 0 && !element.closest('.hp-field'));
+
+  if (!focusable.length) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+}
+
+document.addEventListener('keydown',event => {
+  if (!galleryModal.classList.contains('open')) return;
+  if (event.key === 'ArrowLeft') {
+    event.preventDefault();
+    goToImage(currentImageIndex - 1);
+  }
+  if (event.key === 'ArrowRight') {
+    event.preventDefault();
+    goToImage(currentImageIndex + 1);
+  }
+  if (event.key === 'Escape') closeGallery();
+  if (event.key === 'Tab') trapFocus(event,galleryModal);
+});
+
+// Fade-up animation
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
       }
-    }
-  }
-});
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.fade-up').forEach(element => observer.observe(element));
+} else {
+  document.querySelectorAll('.fade-up').forEach(element => element.classList.add('visible'));
+}
 
-// IntersectionObserver for fade-up
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) e.target.classList.add('visible');
-  });
-}, { threshold:0.12 });
-document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-// Modal (contact) dialog
+// Contact modal
 const modal = document.getElementById('modalContact');
 const modalClose = document.querySelector('.modal-close');
 const modalCancel = document.querySelector('.modal-cancel');
+const modalFormStatus = document.getElementById('modalFormStatus');
 let lastFocusedElement = null;
 
-function openModal(prefill = "") {
+function openModal(prefill = '') {
   lastFocusedElement = document.activeElement;
   modal.classList.add('open');
-  modal.setAttribute('aria-hidden', 'false');
+  modal.setAttribute('aria-hidden','false');
   document.body.style.overflow = 'hidden';
   document.getElementById('modal-message').value = prefill;
+  modalFormStatus.textContent = '';
   requestAnimationFrame(() => document.getElementById('modal-name').focus());
 }
 
 function closeModal() {
   modal.classList.remove('open');
-  modal.setAttribute('aria-hidden', 'true');
+  modal.setAttribute('aria-hidden','true');
   document.body.style.overflow = '';
   if (lastFocusedElement) lastFocusedElement.focus();
 }
 
-modalClose.addEventListener('click', closeModal);
-modalCancel.addEventListener('click', closeModal);
-modal.addEventListener('click', e => {
-  if (e.target === modal) closeModal();
+modalClose.addEventListener('click',closeModal);
+modalCancel.addEventListener('click',closeModal);
+modal.addEventListener('click',event => {
+  if (event.target === modal) closeModal();
+});
+document.addEventListener('keydown',event => {
+  if (!modal.classList.contains('open')) return;
+  if (event.key === 'Escape') closeModal();
+  if (event.key === 'Tab') trapFocus(event,modal);
 });
 
-document.addEventListener('keydown', e => {
-  if (modal.classList.contains('open')) {
-    if (e.key === 'Escape') {
-      closeModal();
-    } else if (e.key === 'Tab') {
-      const focusable = modal.querySelectorAll('button, [href], input, textarea, [tabindex]:not([tabindex="-1"])');
-      const focusArray = Array.prototype.slice.call(focusable);
-      const first = focusArray[0];
-      const last = focusArray[focusArray.length - 1];
-      if (e.shiftKey && document.activeElement === first) {
-        e.preventDefault();
-        last.focus();
-      } else if (!e.shiftKey && document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
-      }
-    }
-  }
+document.querySelector('.brand').addEventListener('click',event => {
+  event.preventDefault();
+  window.scrollTo({
+    top:0,
+    behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+  });
 });
 
-document.querySelector('.brand').addEventListener('click', (e) => {
-  e.preventDefault();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
+// Contact page form
 const contactPageForm = document.getElementById('contactPageForm');
 const formStatus = document.getElementById('formStatus');
 const formStatusVisible = document.getElementById('formStatusVisible');
+const contactSuccess = document.getElementById('contactSuccess');
 
-if (contactPageForm) {
-  contactPageForm.addEventListener('submit', e => {
-    e.preventDefault();
-    formStatus.textContent = '';
-    formStatusVisible.textContent = '';
-    formStatusVisible.className = 'form-status-visible';
-    formStatusVisible.setAttribute('aria-hidden', 'true');
-
-    const fields = [
-      { id: 'contact-name', requiredMsg: 'Name is required.' },
-      { id: 'contact-email', requiredMsg: 'Email is required.' },
-      { id: 'contact-message', requiredMsg: 'Message is required.' }
-    ];
-
-    let firstErrorField = null;
-
-    fields.forEach(({ id }) => {
-      const field = document.getElementById(id);
-      const errorEl = document.getElementById('error-' + id);
-      field.classList.remove('input-error');
-      field.removeAttribute('aria-invalid');
-      field.removeAttribute('aria-describedby');
-      if (errorEl) errorEl.textContent = '';
-    });
-
-    fields.forEach(({ id, requiredMsg }) => {
-      const field = document.getElementById(id);
-      const errorEl = document.getElementById('error-' + id);
-      const value = field.value.trim();
-
-      if (!value) {
-        if (errorEl) errorEl.textContent = requiredMsg;
-        field.classList.add('input-error');
-        field.setAttribute('aria-invalid', 'true');
-        field.setAttribute('aria-describedby', errorEl.id);
-        if (!firstErrorField) firstErrorField = field;
-      } else if (id === 'contact-email') {
-        const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
-        if (!emailPattern.test(value)) {
-          if (errorEl) {
-            errorEl.textContent = 'Please enter a valid email address, such as [name@example.com](mailto:name@example.com).';
-          }
-          field.classList.add('input-error');
-          field.setAttribute('aria-invalid', 'true');
-          field.setAttribute('aria-describedby', errorEl.id);
-          if (!firstErrorField) firstErrorField = field;
-        }
-      }
-    });
-
-    if (firstErrorField) {
-      const msg = 'Please correct the errors in the form.';
-      formStatus.textContent = msg;
-      formStatusVisible.textContent = msg;
-      formStatusVisible.classList.add('error');
-      formStatusVisible.setAttribute('aria-hidden', 'false');
-      firstErrorField.focus();
-      firstErrorField.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      return;
-    }
-
-    const formData = new FormData(contactPageForm);
-    fetch('https://usebasin.com/f/c6b5ba9a258f', {
-      method: 'POST',
-      body: formData
-    }).then(() => {
-      const msg = 'Message sent successfully.';
-      document.getElementById('contactSuccess').classList.add('show');
-      formStatus.textContent = msg;
-      formStatusVisible.textContent = msg;
-      formStatusVisible.classList.add('success');
-      formStatusVisible.setAttribute('aria-hidden', 'false');
-      contactPageForm.reset();
-      fields.forEach(({ id }) => {
-        document.getElementById(id).classList.remove('input-error');
-      });
-      setTimeout(() => {
-        document.getElementById('contactSuccess').classList.remove('show');
-      }, 5000);
-    }).catch(err => {
-      console.error('Form submission error:', err);
-      const msg = 'Error sending message. Please try again.';
-      formStatus.textContent = msg;
-      formStatusVisible.textContent = msg;
-      formStatusVisible.classList.add('error');
-      formStatusVisible.setAttribute('aria-hidden', 'false');
-      alert('Error sending message. Please try again.');
-    });
-  });
+function setPageStatus(message,type) {
+  formStatus.textContent = message;
+  formStatusVisible.textContent = message;
+  formStatusVisible.className = 'form-status-visible' + (type ? ' ' + type : '');
+  formStatusVisible.setAttribute('aria-hidden',message ? 'false' : 'true');
 }
 
+function clearFieldError(field) {
+  field.classList.remove('input-error');
+  field.removeAttribute('aria-invalid');
+  field.removeAttribute('aria-describedby');
+  const errorElement = document.getElementById('error-' + field.id);
+  if (errorElement) errorElement.textContent = '';
+}
+
+const pageFields = [
+  {id:'contact-name',requiredMsg:'Name is required.'},
+  {id:'contact-email',requiredMsg:'Email is required.'},
+  {id:'contact-message',requiredMsg:'Message is required.'}
+];
+
+contactPageForm.addEventListener('submit',async event => {
+  event.preventDefault();
+  setPageStatus('','');
+  contactSuccess.classList.remove('show');
+  let firstErrorField = null;
+
+  pageFields.forEach(({id,requiredMsg}) => {
+    const field = document.getElementById(id);
+    const errorElement = document.getElementById('error-' + id);
+    clearFieldError(field);
+
+    let error = '';
+    if (!field.value.trim()) {
+      error = requiredMsg;
+    } else if (id === 'contact-email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(field.value.trim())) {
+      error = 'Please enter a valid email address, such as name@example.com.';
+    }
+
+    if (error) {
+      errorElement.textContent = error;
+      field.classList.add('input-error');
+      field.setAttribute('aria-invalid','true');
+      field.setAttribute('aria-describedby',errorElement.id);
+      if (!firstErrorField) firstErrorField = field;
+    }
+  });
+
+  if (firstErrorField) {
+    setPageStatus('Please correct the errors in the form.','error');
+    firstErrorField.focus();
+    firstErrorField.scrollIntoView({behavior:'smooth',block:'center'});
+    return;
+  }
+
+  const submitButton = contactPageForm.querySelector('[type="submit"]');
+  submitButton.disabled = true;
+  submitButton.textContent = 'Sending...';
+
+  try {
+    const response = await fetch(contactPageForm.action,{
+      method:'POST',
+      headers:{'Accept':'application/json'},
+      body:new FormData(contactPageForm)
+    });
+    if (!response.ok) throw new Error('Submission failed: ' + response.status);
+
+    contactPageForm.reset();
+    pageFields.forEach(({id}) => clearFieldError(document.getElementById(id)));
+    contactSuccess.classList.add('show');
+    setPageStatus('Message sent successfully.','success');
+    setTimeout(() => contactSuccess.classList.remove('show'),5000);
+  } catch (error) {
+    console.error('Form submission error:',error);
+    setPageStatus('Error sending message. Please try again or call (408) 213-7456.','error');
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = 'Send Message';
+  }
+});
+
+contactPageForm.addEventListener('reset',() => {
+  pageFields.forEach(({id}) => clearFieldError(document.getElementById(id)));
+  contactSuccess.classList.remove('show');
+  setPageStatus('','');
+});
+
+// Contact modal form
 const modalForm = document.getElementById('contactForm');
-if (modalForm) {
-  modalForm.addEventListener('submit', e => {
-    e.preventDefault();
-    const fields = modalForm.querySelectorAll('input[required], textarea[required]');
-    let isValid = true;
 
-    fields.forEach(field => {
-      field.classList.remove('input-error');
-      field.removeAttribute('aria-invalid');
-    });
+modalForm.addEventListener('submit',async event => {
+  event.preventDefault();
+  modalFormStatus.textContent = '';
 
-    fields.forEach(field => {
-      if (!field.value.trim()) {
-        field.classList.add('input-error');
-        field.setAttribute('aria-invalid', 'true');
-        isValid = false;
-      }
-    });
+  const fields = Array.from(modalForm.querySelectorAll('input[required],textarea[required]'));
+  let firstErrorField = null;
 
-    if (!isValid) {
-      fields[0].focus();
-      return;
+  fields.forEach(field => {
+    clearFieldError(field);
+    const empty = !field.value.trim();
+    const invalidEmail = field.type === 'email' &&
+      !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(field.value.trim());
+
+    if (empty || invalidEmail) {
+      field.classList.add('input-error');
+      field.setAttribute('aria-invalid','true');
+      if (!firstErrorField) firstErrorField = field;
     }
-
-    const formData = new FormData(modalForm);
-    fetch('https://usebasin.com/f/c6b5ba9a258f', {
-      method: 'POST',
-      body: formData
-    }).then(() => {
-      closeModal();
-      modalForm.reset();
-      fields.forEach(field => field.classList.remove('input-error'));
-    }).catch(err => {
-      console.error('Form submission error:', err);
-      alert('Error sending message. Please try again.');
-    });
   });
-}
 
-document.querySelectorAll('input, textarea').forEach(field => {
-  field.addEventListener('input', () => {
-    field.classList.remove('input-error');
-    field.removeAttribute('aria-invalid');
-    const errorEl = document.getElementById('error-' + field.id);
-    if (errorEl) errorEl.textContent = '';
-    if (formStatusVisible) {
-      formStatusVisible.textContent = '';
-      formStatusVisible.className = 'form-status-visible';
-      formStatusVisible.setAttribute('aria-hidden', 'true');
-    }
-    if (formStatus) formStatus.textContent = '';
+  if (firstErrorField) {
+    modalFormStatus.textContent = 'Please complete all required fields and enter a valid email address.';
+    firstErrorField.focus();
+    return;
+  }
+
+  const submitButton = modalForm.querySelector('[type="submit"]');
+  submitButton.disabled = true;
+  submitButton.textContent = 'Sending...';
+
+  try {
+    const response = await fetch(modalForm.action,{
+      method:'POST',
+      headers:{'Accept':'application/json'},
+      body:new FormData(modalForm)
+    });
+    if (!response.ok) throw new Error('Submission failed: ' + response.status);
+
+    modalForm.reset();
+    fields.forEach(clearFieldError);
+    closeModal();
+    setPageStatus('Message sent successfully. We will get back to you soon.','success');
+    alert('Message sent successfully! We will get back to you soon.');
+  } catch (error) {
+    console.error('Form submission error:',error);
+    modalFormStatus.textContent = 'Error sending message. Please try again or call (408) 213-7456.';
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = 'Send';
+  }
+});
+
+document.querySelectorAll('input,textarea').forEach(field => {
+  field.addEventListener('input',() => {
+    clearFieldError(field);
+    if (contactPageForm.contains(field)) setPageStatus('','');
+    if (modalForm.contains(field)) modalFormStatus.textContent = '';
   });
 });
 </script>
