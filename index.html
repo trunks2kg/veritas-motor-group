@@ -658,7 +658,7 @@ footer address { font-style:normal; }
           <div class="spec" role="listitem"><small>Model</small>X3 xDrive35i</div>
           <div class="spec" role="listitem"><small>Transmission</small>Automatic</div>
           <div class="spec" role="listitem"><small>Mileage</small>149,300</div>
-          <div class="spec" role="listitem"><small>Price</small>$6,495</div>
+          <div class="spec" role="listitem"><small>Price</small>$6,995</div>
         </div>
         <div class="actions">
           <button type="button" class="btn" onclick="openModal('I am interested in the 2011 BMW X3 xDrive35i listed at $6,995. Please contact me with more information.')">Request Info</button>
@@ -666,7 +666,41 @@ footer address { font-style:normal; }
       </div>
     </article>
 
-    <!-- Item 2: 2010 Ford F-150 Raptor -->
+    <!-- Item 2: 2008 Acura TL -->
+    <article class="inventory-item fade-up" aria-labelledby="veh-2008-acura-tl-title">
+      <figure class="vehicle-figure gallery-trigger"
+        data-vehicle="acura-tl"
+        tabindex="0"
+        role="button"
+        aria-haspopup="dialog"
+        aria-label="View all 21 photos of the 2008 Acura TL">
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800936/PXL_20261108_010328892_tmijfh.jpg"
+          alt="2008 Acura TL"
+          width="560"
+          height="420">
+        <span class="photo-hint" aria-hidden="true">View 21 Photos</span>
+      </figure>
+
+      <div class="vehicle-meta">
+        <div class="kicker">2008 • Acura</div>
+        <h2 class="vehicle-title" id="veh-2008-acura-tl-title">2008 Acura TL</h2>
+        <p class="vehicle-copy">The 2008 Acura TL pairs a smooth 3.2L V6 with a roomy, well-equipped cabin and a comfortable, composed ride. A refined sport sedan that delivers strong everyday value and plenty of luxury for the price.</p>
+        <div class="specs" role="list">
+          <div class="spec" role="listitem"><small>Model</small>TL</div>
+          <div class="spec" role="listitem"><small>Transmission</small>Automatic</div>
+          <div class="spec" role="listitem"><small>Mileage</small>232,000</div>
+          <div class="spec" role="listitem"><small>Price</small>$3,495</div>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn" onclick="openModal('I am interested in the 2008 Acura TL listed at $3,495. Please contact me with more information.')">Request Info</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Item 3: 2010 Ford F-150 Raptor -->
     <article class="inventory-item fade-up" aria-labelledby="veh-2010-f150-raptor-title">
       <figure class="vehicle-figure vehicle-coming-soon">
         <img loading="lazy" decoding="async" fetchpriority="low" src="https://res.cloudinary.com/dyg8btkjp/image/upload/v1765603249/joey-chacon-wyVdoMqF184-unsplash_wdwkoo.jpg" alt="2010 Ford F-150 Raptor off-road" width="560" height="420">
@@ -795,7 +829,7 @@ footer address { font-style:normal; }
 </div>
 
 <script>
-// BMW photos in the exact order provided.
+// Photos are in the exact order provided.
 const vehicleGalleries = {
   'bmw-x3': [
     'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292631/PXL_20261028_010257671_3_kmrvdi.jpg',
@@ -819,11 +853,35 @@ const vehicleGalleries = {
     'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292638/PXL_20261028_010940035_2_oovo3d.jpg',
     'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292639/PXL_20261028_011001040_2_mlnvqz.jpg',
     'https://res.cloudinary.com/dyg8btkjp/image/upload/v1793292639/PXL_20261028_010954773_2_afdcje.jpg'
+  ],
+  'acura-tl': [
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800936/PXL_20261108_010328892_tmijfh.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800937/PXL_20261108_010336144_dxuwe5.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800937/PXL_20261108_010352892_nmcocv.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800937/PXL_20261108_010359144_pxhvkq.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800938/PXL_20261108_010406053_reg1jl.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800939/PXL_20261108_010412112_od6l6i.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800939/PXL_20261108_010421306_bsorrh.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800940/PXL_20261108_010429278_lhn069.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800941/PXL_20261108_010440963_rirfoj.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800942/PXL_20261108_010545721_gu0kh6.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800942/PXL_20261108_010556572_gvqy2m.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800943/PXL_20261108_010627411_priuok.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800943/PXL_20261108_010605111_lamrjt.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800944/PXL_20261108_010615170.MP_m8qxni.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800944/PXL_20261108_011044399_2_o325oy.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800945/PXL_20261108_011018134_2_irt4pc.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800946/PXL_20261108_010933862_oakwxw.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800946/PXL_20261108_010703362_sisy0c.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800947/PXL_20261108_010656630_vshl6u.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800948/PXL_20261108_010648518_xwq5mq.jpg',
+    'https://res.cloudinary.com/dyg8btkjp/image/upload/v1795800948/PXL_20261108_010642322_zo8o3o.jpg'
   ]
 };
 
 const vehicleNames = {
-  'bmw-x3':'2011 BMW X3 xDrive35i'
+  'bmw-x3':'2011 BMW X3 xDrive35i',
+  'acura-tl':'2008 Acura TL'
 };
 
 let currentGallery = [];
